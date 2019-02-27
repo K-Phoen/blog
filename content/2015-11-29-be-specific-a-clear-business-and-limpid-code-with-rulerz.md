@@ -1,6 +1,6 @@
 ---
-layout: post
 title: Be specific - A clear business and limpid code with RulerZ
+date: 2015-11-29
 tldr: >
     I gave a talk at the Forum PHP 2015:
     <ul>

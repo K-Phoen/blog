@@ -1,0 +1,8 @@
+languageCode = "en-us"
+title = "Kévin Gomez"
+theme = "ananke"
+
+pygmentsCodeFences = true
+
+[permalinks]
+    posts = "/:year/:month/:day/:title/"
