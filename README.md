@@ -1,4 +1,4 @@
-# My Blog
+# My Blog [![Build Status](https://travis-ci.org/K-Phoen/blog.svg?branch=master)](https://travis-ci.org/K-Phoen/blog)
 
 ## Installation
 
