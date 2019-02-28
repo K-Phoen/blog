@@ -1,10 +1,12 @@
 ---
-layout: post
 title: Done with school.
+date: 2015-08-30
 ---
 
 That's it. After five years spent learning computer science in various schools
 and universities, I'm finally free!
+
+<!--more-->
 
 I had the chance to work for several companies in addition to being a student
 and I really am eager to get involved in other projects.
@@ -18,4 +20,4 @@ in which I believe. Even more glad to work with coworkers as amazing and
 qualified as the ones who work at TEA.
 
 I remember writing my first website as a hobby when I was twelve. I find it
-funny to see that it has become a real passion and my job! 
+funny to see that it has become a real passion and my job!

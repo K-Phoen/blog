@@ -12,6 +12,8 @@ tldr: >
 November 24th 2015, I gave my first *big* talk at the Forum PHP conference,
 organized by the [AFUP](http://afup.org/pages/site/) in Paris.
 
+<!--more-->
+
 Despite the stress, my talk went well and the audience seem to agree with me
 (at least according to [their ratings on joind.in](https://joind.in/talk/view/15276)).
 

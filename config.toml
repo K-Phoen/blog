@@ -1,8 +1,20 @@
-languageCode = "en-us"
 title = "Kévin Gomez"
-theme = "ananke"
+baseurl = "/"
+languageCode = "en-us"
+
+theme = "kphoen"
 
 pygmentsCodeFences = true
+enableGitInfo = true
+
+[params]
+    author = "Kévin Gomez"
+    mainSections = ["posts", "til"]
+
+[frontmatter]
+    lastmod = ["lastmod"]
+    date = ["date", ":filename", "lastmod"]
+    publishDate = ["publishDate", "date"]
 
 [permalinks]
     posts = "/:year/:month/:day/:title/"

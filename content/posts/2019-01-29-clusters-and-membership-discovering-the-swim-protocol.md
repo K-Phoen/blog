@@ -1,6 +1,6 @@
 ---
-layout: post
 title: "Clusters and membership: discovering the SWIM protocol"
+date: 2019-01-29
 description: >
     Have you ever wondered how [Cassandra](https://cassandra.apache.org/),
     [Redis](https://redis.io/), [Riak](http://basho.com/products/#riak), and

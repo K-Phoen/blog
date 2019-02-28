@@ -1,6 +1,6 @@
 ---
-layout: post
 title: Efficiently creating data chunks in PHP
+date: 2016-02-26
 description: >
     How to efficiently create chunks from several iterators in PHP?
 ---

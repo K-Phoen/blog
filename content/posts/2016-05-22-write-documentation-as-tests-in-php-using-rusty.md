@@ -1,6 +1,6 @@
 ---
-layout: post
 title: Write documentation as tests in PHP using Rusty
+date: 2016-05-22
 description: >
     Languages such as Python or Rust provide an interesting way to document
     code: they write code samples inside their documentation and they make them

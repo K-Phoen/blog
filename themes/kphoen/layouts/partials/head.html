@@ -1,0 +1,22 @@
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <meta property="og:locale" content="{{ $.Site.LanguageCode | default "en" }}" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="author" content="{{ .Site.Params.Author }}" />
+
+    <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} &mdash; {{ end }}{{ .Site.Title }}{{ end }}</title>
+    <meta property="og:title" content="{{ .Site.Title }}" />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" />
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+    {{ $pygments := resources.Get "css/pygments-github.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $pygments.Permalink }}">
+    {{ $style := resources.Get "css/blog.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+    <link rel="alternate" type="application/atom+xml" title="{{ .Site.Title }} &mdash; Atom" href="/atom.xml" />
+</head>

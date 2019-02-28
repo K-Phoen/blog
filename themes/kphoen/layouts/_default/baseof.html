@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ $.Site.LanguageCode | default "en" }}" dir="ltr">
+{{- partial "head.html" . -}}
+<body>
+<div id="layout" class="pure-g">
+    {{- partial "header.html" . -}}
+
+    <div class="pure-u-1">
+        <div class="content">
+            <div class="job-alert">
+                Are you <strong>looking for a software engineer?</strong> Perfect: <strong>I am looking for a job!</strong><br />
+                <strong><a href="mailto:contact+job@kevingomez.fr">Contact me</a></strong> and let's see what awesome things we can build together!
+            </div>
+
+            {{- block "main" . }}{{- end }}
+
+            {{- partial "footer.html" . -}}
+        </div>
+    </div>
+</div>
+</body>
+</html>

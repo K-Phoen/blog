@@ -1,0 +1,12 @@
+name = "kphoen"
+license = "MIT"
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+description = ""
+homepage = "https://blog.kevingomez.fr/"
+tags = []
+features = []
+min_version = "0.41"
+
+[author]
+  name = "Kévin Gomez"
+  homepage = "https://blog.kevingomez.fr/"

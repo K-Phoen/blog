@@ -1,6 +1,6 @@
 ---
-layout: post
 title: New life, new blog
+date: 2015-03-13
 ---
 
 I launched [my first blog](http://archives.kevingomez.fr) in 2007, when I
@@ -8,6 +8,8 @@ started to attend *lycée* (the American equivalent would be High School I guess
 something like 9th or 10th grade). While most my posts were kinda
 *tech-oriented*, the rest of them were... well let's say that I was young and
 that I've evolved since!
+
+<!--more-->
 
 And here I am, eight years later, about to graduate in computer science and still
 posting on this old Wordpress blog. But all the good things eventually come to

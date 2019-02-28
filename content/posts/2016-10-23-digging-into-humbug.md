@@ -1,6 +1,6 @@
 ---
-layout: post
 title: 'Digging into: Humbug'
+date: 2016-10-23
 description: >
     How does Humbug mutate source code?
 tldr: >
