@@ -2,8 +2,6 @@ title = "Kévin Gomez"
 baseurl = "/"
 languageCode = "en-us"
 
-theme = "kphoen"
-
 pygmentsCodeFences = true
 enableGitInfo = true
 
