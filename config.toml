@@ -11,6 +11,9 @@ disableKinds = ["sitemap"]
     author = "Kévin Gomez"
     mainSections = ["posts", "til"]
 
+[social]
+    twitter = "KPhoen"
+
 [frontmatter]
     lastmod = ["lastmod"]
     date = ["date", ":filename", "lastmod", ":git"]
