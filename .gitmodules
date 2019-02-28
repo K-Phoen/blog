@@ -1,9 +1,3 @@
-[submodule "travels/autumn-2018"]
-	path = static/travels/autumn-2018
-	url = https://github.com/K-Phoen/autumn_2018.git
-[submodule "travels/scotland-2018"]
-	path = static/travels/scotland-2018
-	url = https://github.com/K-Phoen/scotland_2018.git
 [submodule "public"]
 	path = public
 	url = git@github.com:K-Phoen/k-phoen.github.io.git
