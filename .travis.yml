@@ -1,13 +1,13 @@
-language: ruby
-rvm:
-    - 2.1.0
+language: go
 
-cache:
-    - directories:
-        - /home/travis/.rvm/
+sudo: false
 
 # as we don't use travis to actually deploy the blog, there is no need to init the submodules (travel photos)
 git:
     submodules: false
 
-script: "bundle exec jekyll build"
+install:
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.54.0/hugo_0.54.0_Linux-64bit.tar.gz
+    - tar xzf hugo_0.54.0_Linux-64bit.tar.gz
+
+script: "./hugo"
