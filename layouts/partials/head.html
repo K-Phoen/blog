@@ -1,15 +1,14 @@
 <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8" />
-    <meta property="og:locale" content="{{ $.Site.LanguageCode | default "en" }}" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <meta name="author" content="{{ .Site.Params.Author }}" />
 
     <title>{{ with .Params.Title }}{{ . }} &mdash; {{ end }}{{ .Site.Title }}</title>
-    <meta property="og:title" content="{{ with .Params.Title }}{{ . }} &mdash; {{ end }}{{ .Site.Title }}" />
-    <meta property="og:type" content="website" />
 
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+
+    {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" />
