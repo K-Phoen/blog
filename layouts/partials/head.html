@@ -6,8 +6,8 @@
 
     <meta name="author" content="{{ .Site.Params.Author }}" />
 
-    <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} &mdash; {{ end }}{{ .Site.Title }}{{ end }}</title>
-    <meta property="og:title" content="{{ .Site.Title }}" />
+    <title>{{ with .Params.Title }}{{ . }} &mdash; {{ end }}{{ .Site.Title }}</title>
+    <meta property="og:title" content="{{ with .Params.Title }}{{ . }} &mdash; {{ end }}{{ .Site.Title }}" />
     <meta property="og:type" content="website" />
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" />
