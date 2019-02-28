@@ -1,6 +1,7 @@
 ---
 title: Parallel bundle install
 category: til
+url: /til/2015/07/12/parallel-bundle-install/
 ---
 
 In ruby projects, the `bundle install` command is known to be quite slow. To

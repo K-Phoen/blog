@@ -1,6 +1,7 @@
 ---
 title: Why is uniqid() slow?
 category: til
+url: /til/2015/07/26/why-is-uniqid-slow/
 description: While profiling [RulerZ](https://github.com/K-Phoen/rulerz) with [Blackfire.io](https://blackfire.io/), I noticed that a non-negligible amount of time was consumed by PHP's `uniqid()` function. I found it odd that it consumed so much time and started to investigate why.
 
 tldr: >
