@@ -1,8 +1,13 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date.Format "2 January 2006" }}
+title: "{{ replace .Name "-" " " | humanize }}"
+date: {{ dateFormat "2006-01-02" .Date }}
 draft: true
 description: ""
 tldr: ""
 ---
 
+excerpt/description
+
+<!--more-->
+
+rest
