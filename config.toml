@@ -11,7 +11,7 @@ enableGitInfo = true
 
 [frontmatter]
     lastmod = ["lastmod"]
-    date = ["date", ":filename", "lastmod"]
+    date = ["date", ":filename", "lastmod", ":git"]
     publishDate = ["publishDate", "date"]
 
 [permalinks]

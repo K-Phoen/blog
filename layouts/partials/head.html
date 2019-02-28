@@ -18,5 +18,7 @@
     {{ $style := resources.Get "css/blog.css" | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
 
-    <link rel="alternate" type="application/atom+xml" title="{{ .Site.Title }} &mdash; Atom" href="/atom.xml" />
+    {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
 </head>
