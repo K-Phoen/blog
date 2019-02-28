@@ -4,6 +4,8 @@ languageCode = "en-us"
 
 pygmentsCodeFences = true
 enableGitInfo = true
+disableHugoGeneratorInject = true
+disableKinds = ["sitemap"]
 
 [params]
     author = "Kévin Gomez"
