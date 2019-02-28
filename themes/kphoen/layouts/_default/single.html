@@ -5,10 +5,11 @@
             {{ if eq .Section "til" }}<abbr class="label radius til" title="Today I Learned">TIL</abbr>{{ end }}
             <a href="{{ .Permalink }}">{{ .Title }}</a>
         </h1>
+
         <span class="post-meta">
             <meta itemprop="inLanguage" content="{{ $.Site.LanguageCode | default "en" }}" />
-            <time pubdate="pubdate" datetime="{% page.date|date_to_xmlschema %}">
-                <meta itemprop="datePublished" content="{% page.date|date_to_xmlschema %}" />
+            <time pubdate="pubdate" datetime="{{ .Date.Format "2006-01-02" }}T00:00:00+01:00">
+                <meta itemprop="datePublished" content="{{ .Date.Format "2006-01-02" }}T00:00:00+01:00" />
                 {{ .Date.Format "2 January 2006" }}
             </time>
             —

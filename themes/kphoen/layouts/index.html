@@ -13,8 +13,8 @@
             </h2>
 
             <span class="post-meta">
-                <time pubdate="pubdate" datetime="{% post.date | date_to_xmlschema %}">
-                    <meta itemprop="datePublished" content="{% post.date | date_to_xmlschema %}" />
+                <time pubdate="pubdate" datetime="{{ .Date.Format "2006-01-02" }}T00:00:00+01:00">
+                    <meta itemprop="datePublished" content="{{ .Date.Format "2006-01-02" }}T00:00:00+01:00" />
                     {{ .Date.Format "2 January 2006" }}
                 </time>
                 —
