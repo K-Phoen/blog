@@ -1,7 +1,6 @@
 ---
-layout:      post
-title:       PHP ::class keyword
-category:    til
+title: PHP ::class keyword
+category: til
 description: >
     The `::class` keyword look like it can be used to assert that the generated FQCN will point to a valid class. Guess what: it cant.
 

@@ -1,7 +1,6 @@
 ---
-layout:      post
-title:       Parallel bundle install
-category:    til
+title: Parallel bundle install
+category: til
 ---
 
 In ruby projects, the `bundle install` command is known to be quite slow. To
