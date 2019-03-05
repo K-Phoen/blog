@@ -1,6 +1,9 @@
 -
     year: 2019
     books:
+        -   title: "Les Premiers-Nés"
+            authors: "Arthur C. Clarke"
+            url: "http://www.bragelonne.fr/livres/View/les-premiers-nes"
         -   title: "Guerre aux invisibles"
             authors: "Eric Frank Russel"
             url: "http://www.bragelonne.fr/livres/view/guerre-aux-invisibles"
