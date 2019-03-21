@@ -1,6 +1,9 @@
 -
     year: 2019
     books:
+        -   title: "La terre bleue de nos souvenirs"
+            authors: "Alastair Reynolds"
+            url: "http://www.bragelonne.fr/livres/View/la-terre-bleue-de-nos-souvenirs"
         -   title: "Les Premiers-Nés"
             authors: "Arthur C. Clarke"
             url: "http://www.bragelonne.fr/livres/View/les-premiers-nes"
