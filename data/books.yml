@@ -1,6 +1,9 @@
 -
     year: 2019
     books:
+        -   title: "So phare away"
+            authors: "Alain Damasio"
+            url: "http://www.gallimard.fr/Catalogue/GALLIMARD/Folio/Folio-2/So-phare-away-et-autres-nouvelles"
         -   title: "La terre bleue de nos souvenirs"
             authors: "Alastair Reynolds"
             url: "http://www.bragelonne.fr/livres/View/la-terre-bleue-de-nos-souvenirs"
