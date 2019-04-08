@@ -3,6 +3,8 @@ baseurl = "/"
 languageCode = "en-us"
 
 pygmentsCodeFences = true
+pygmentsUseClassic = true
+pygmentsUseClasses = true
 enableGitInfo = true
 disableHugoGeneratorInject = true
 disableKinds = ["sitemap"]
