@@ -5,17 +5,16 @@ description: >
     How does Humbug mutate source code?
 tldr: >
     In the end, the mutation generation by Humbug is *pretty straightforward*:
-
+    
+ 
     1. it starts by splitting the code in tokens, using the standard `token_get_all()` function
 
-    2. then it applies a list of *mutators* to the previously generated tokens. A
-       mutator being responsible to alter tokens (ie: replacing a `+` with a `-`)
+    2. then it applies a list of *mutators* to the previously generated tokens. A mutator being responsible to alter tokens (ie: replacing a `+` with a `-`)
 
-    3. once all the mutators are applied, it uses the tokens to rebuild the source
-       code.
+    3. once all the mutators are applied, it uses the tokens to rebuild the source code.
 
-    4. code having changed, the unit tests should fail. So it launches them and
-       expects failures.
+    4. code having changed, the unit tests should fail. So it launches them and expects failures.
+    
 
     Now I see why I didn't find something like nikic/PHP-parser in the dependencies:
     it simply would have been overkill and too complex to work with an AST.
@@ -47,6 +46,7 @@ coverage is sufficient and we say that they *killed the mutation*. If they didn'
 then you have a problem because the *mutation escaped*.
 
 According to Humbug's README, mutations usually involve:
+
 * switching binary arithmetic operators: `+` becomes `-`, `*` becomes `/`, …
 * substituting logical operations: `&&` becomes `||`, `true` becomes `false`, …
 * inversing conditions: `>` becomes `<`, `===` becomes `!===`, …
@@ -91,6 +91,7 @@ After reading the dependencies list, I see nothing that would help to manipulate
 source code.
 
 I do see interesting things though:
+
 * `phpunit/phpunit` is a hard dependency: meaning that Humbug won't work with
   other test frameworks
 * `symfony/finder` and `symfony/process`: common components used to find files
