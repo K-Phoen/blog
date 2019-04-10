@@ -3,9 +3,9 @@ baseurl = "/"
 languageCode = "en-us"
 
 pygmentsCodeFences = true
-pygmentsUseClassic = true
-pygmentsUseClasses = true
+pygmentsUseClassic = true # use pygments instead of chroma
 pygmentsOptions = "startinline=true"
+pygmentsStyle = "tango"
 enableGitInfo = true
 disableHugoGeneratorInject = true
 disableKinds = ["sitemap"]
