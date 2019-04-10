@@ -23,7 +23,7 @@ want it to have:
 * **minimal disruption**: whenever a node fails or is added to the cluster, the
   number of keys to relocate to another node should be as small as possible ;
 * **distributed agreement**: for a given key, all the nodes should choose the
-  same node as recipient.
+  same node as the recipient.
 
 ## Hashtable-like approach
 
@@ -47,7 +47,7 @@ bucket := bucketsList[hash(key) % N]
 ```
 
 Similarly, if we have <code>N</code> servers, we could use the same algorithm to
-determine which one will be responsible of the given key:
+determine which one will be responsible for the given key:
 
 ```go
 server := serversList[hash(key) % N]
@@ -91,7 +91,7 @@ between servers being expensive, the less data we transfer, the better.
 And that's the main issue with this algorithm: a lot of data would have to be
 moved around each time the cluster' state changes.
 
-**Note**: another issue that could be raise is the need for each node to
+**Note**: another issue that could be raised is the need for each node to
 maintain a list of all other nodes in the cluster. It's not an issue for me as I
 rely on SWIM to maintain and monitor my cluster. Through this protocol, each
 node has an up-to-date (eventually) list of the members of the cluster.
@@ -145,7 +145,7 @@ func ResponsibleNode(nodes []Node, key string) Node {
 
 **Note**: [*MurmurHash*](https://en.wikipedia.org/wiki/MurmurHash) is a
 non-cryptographic, general-purpose hash function that is often used for
-rendezvous hashing. There is also a [pretty cool answer on stackoverflow](https://softwareengineering.stackexchange.com/questions/49550/which-hashing-algorithm-is-best-for-uniqueness-and-speed/145633#145633)
+rendezvous hashing. There is also a [pretty cool answer on StackOverflow](https://softwareengineering.stackexchange.com/questions/49550/which-hashing-algorithm-is-best-for-uniqueness-and-speed/145633#145633)
 where someone did an interesting comparison of several hashing algorithms.
 
 ## Evaluating rendezvous hashing
@@ -153,7 +153,7 @@ where someone did an interesting comparison of several hashing algorithms.
 This algorithm is pretty similar to the "hashtable-style" one in the sense where
 it relies on hash functions to map objects to servers.
 
-The main difference lies on how you map a key to a server. Instead of hashing
+The main difference lies in how you map a key to a server. Instead of hashing
 the key and using a <code>mod</code> to select the server, the hash number is
 considered as a weight. This makes the whole process almost immune to cluster
 changes.
