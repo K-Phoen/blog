@@ -135,7 +135,6 @@ tokens — with a precise signification (identifier, literal, assignment operato
 The method `getMutation()` seems to be the one applying the mutation:
 
 ```php
-<?php
 /**
  * Replace plus sign (+) with minus sign (-)
  *
@@ -170,7 +169,6 @@ that performs the mutation on the given tokens and returns the result as source
 code:
 
 ```php
-<?php
 /**
  * Perform a mutation against the given original source code tokens for
  * a mutable element

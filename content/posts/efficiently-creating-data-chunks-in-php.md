@@ -17,7 +17,6 @@ Each provider being an Iterator, I can *chain* them using nikic's [`iter`](https
 library:
 
 ```php
-<?php
 $firstUrlProvider = …;
 $secondUrlProvider = …;
 
@@ -37,7 +36,6 @@ from my `$aggregatedProvider`, without storing the whole chunks in memory.
 Looks like it's a job for PHP generators!
 
 ```php
-<?php
 function chunk(\Iterator $iterable, $size): \Iterator
 {
     while ($iterable->valid()) {

@@ -18,7 +18,6 @@ class name resolution:
 > class by using ClassName::class.
 
 ```php
-<?php
 namespace NS {
     class ClassName {
     }
@@ -40,7 +39,6 @@ In fact, you can use this keyword on classes that are neither defined nor
 autoloadable.
 
 ```php
-<?php
 use Foo\Bar;
 
 namespace NS {

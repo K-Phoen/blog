@@ -39,8 +39,6 @@ criteria, I had to update two classes and implement the same criteria twice.
 At this point, my repositories looked like this:
 
 ```php
-<?php
-
 interface CompanyRepository
 {
     public function save(Company $company);
@@ -101,7 +99,6 @@ this [problem is solved](http://blog.kevingomez.fr/2015/02/07/on-taming-reposito
 **Using RulerZ**, the two previous repositories can be refactored:
 
 ```php
-<?php
 interface CompanyRepository
 {
     public function save(Company $company);
@@ -151,7 +148,6 @@ don't you think?
 With that in mind, I wrote the following form type:
 
 ```php
-<?php
 class CompanySearchType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
@@ -188,7 +184,6 @@ What's important is that combining the Form Component, a simple transformer and
 RulerZ leads to really simple controllers:
 
 ```php
-<?php
 public function searchAction(Request $request)
 {
     $results = [];

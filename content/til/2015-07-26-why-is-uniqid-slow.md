@@ -21,8 +21,6 @@ Wait, the "*current date*" part can actually be interesting for our performance
 issue. What happens if we write something like this:
 
 ```php
-<?php
-
 foreach ($foo as $bar) {
     $awesomeCollection[] = new CoolObject(uniqid(), $bar);
 }
