@@ -1,6 +1,9 @@
 -
     year: 2019
     books:
+        -   title: "Le Maître du Haut Château"
+            authors: "Philip K. Dick "
+            url: "https://www.jailu.com/Catalogue/science-fiction/le-maitre-du-haut-chateau"
         -   title: "So phare away"
             authors: "Alain Damasio"
             url: "http://www.gallimard.fr/Catalogue/GALLIMARD/Folio/Folio-2/So-phare-away-et-autres-nouvelles"
