@@ -111,6 +111,13 @@ Here is what the server selection could look like, implemented in Go:
 // assuming that this exists: func hash(key string) int
 
 func (n Node) weight(key string) int {
+	// usually, you would find a way to merge the two hashed instead
+	// of concatenating the server's adress, the key and hashing the
+	// result. The original paper suggests:
+	// a = 1103515245
+	// b = 12345
+	// (a * ((a * server_address + b) ^ hash(key)) + b) % 2^31
+
 	return hash(fmt.Sprintf("%s:%s", n.Address(), key))
 }
 
@@ -130,6 +137,11 @@ func ResponsibleNode(nodes []Node, key string) Node {
 	return node
 }
 ```
+
+**Note**: [*MurmurHash*](https://en.wikipedia.org/wiki/MurmurHash) is a
+non-cryptographic, general-purpose hash function that is often used for
+rendezvous hashing. There is also a [pretty cool answer on stackoverflow](https://softwareengineering.stackexchange.com/questions/49550/which-hashing-algorithm-is-best-for-uniqueness-and-speed/145633#145633)
+where someone did an interesting comparison of several hashing algorithms.
 
 ## Evaluating rendezvous hashing
 
@@ -166,7 +178,28 @@ Quite impressive for an algorithm that simple, isn't it?
 
 ### Going further with rendezvous hashing
 
-### playing with different hash functions
+#### Performance
+
+For a big enough cluster, the <code>O(n)</code> lookup time necessary to compute
+a key to server mapping can be too much.
+
+To mitigate that, a number of optimizations exist.
+
+The simplest way would be to find a trick to speed up the loop iterating over
+the nodes. Possibly by pre-computing hashes for each server and using some
+bit shifting-based black magic to merge the key's hash and the server's one.
+
+But the algorithm's complexity wouldn't change.
+
+That being said, there is a variant of the rendezvous algorithm — [the
+skeleton-based one](https://en.wikipedia.org/wiki/Rendezvous_hashing#Skeleton-based_variant_for_very_large_n) —
+that relies on a virtual hierarchical structure to achieve an <code>O(log n)</code> complexity.
+The idea is to consider the cluster as a tree, with the nodes as leaves and
+introducing virtual nodes to structure the tree in a hierarchical way.
+This tree can then be used to compute hashes just for a subset of the servers in
+the cluster instead of all of them.
+
+#### Replication
 
 ## Other algorithms
 
