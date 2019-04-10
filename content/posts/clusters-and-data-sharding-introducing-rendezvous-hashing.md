@@ -91,6 +91,11 @@ between servers being expensive, the less data we transfer, the better.
 And that's the main issue with this algorithm: a lot of data would have to be
 moved around each time the cluster' state changes.
 
+**Note**: another issue that could be raise is the need for each node to
+maintain a list of all other nodes in the cluster. It's not an issue for me as I
+rely on SWIM to maintain and monitor my cluster. Through this protocol, each
+node has an up-to-date (eventually) list of the members of the cluster.
+
 ## Rendezvous hashing
 
 After googling for a while, I stumbled upon a paper called « [A Named-Based
@@ -201,7 +206,29 @@ the cluster instead of all of them.
 
 #### Replication
 
+For some services like databases or cache servers, replication is a must-have
+feature. Luckily, it's straightforward to implement with rendezvous hashing.
+
+The algorithm already sorts nodes by weight, from the most susceptible to
+receive the object to the least. When we don't want the data to be replicated,
+we select only the first node. If we want the data to live in two nodes, we can
+select the first two nodes of the list. And so on.
+If the "main" node goes down, the algorithm will automatically be able to fetch
+the data from the replica, with no need for additional coordination across
+nodes.
+
 ## Other algorithms
 
-* consistent hashing
-* jump hash
+Of course, rendezvous hashing isn't the only technique to distribute keys across
+servers.
+
+I won't detail them here, I just leave a few of them here, for the curious
+readers:
+
+* [consistent hashing](https://en.wikipedia.org/wiki/Consistent_hashing): don't
+  forget to read the "External links" section ;
+* [jump hash](https://arxiv.org/abs/1406.2294): this one looks like dark magic.
+  It's a hash function that consistently chooses a number between [0, numServers),
+  using the given key (it's basically a srand(), using the key as seed) ;
+* and I'm sure that there are a lot of other methods that I don't know about…
+  feel free to tell me about them!
