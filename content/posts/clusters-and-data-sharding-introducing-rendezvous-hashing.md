@@ -1,16 +1,15 @@
 ---
 title: "Clusters and data sharding: introducing rendezvous hashing"
-date: 2019-04-07
-draft: true
+date: 2019-04-11
 ---
 
 In a [previous article](/2019/01/29/clusters-and-membership-discovering-the-swim-protocol/),
 I started playing with distributed systems by implementing a distributed key-value
 store.
 
-At the end of this article I had a way to create a cluster, know its members
-and monitor their health. But I still didn't touch the main feature of my store:
-actually distributing data. We'll address that here.
+I used SWIM to create a cluster, know its members and monitor their health. But
+I still didn't touch the main feature of my store: actually distributing data.
+Now is the time to address that.
 
 <!--more-->
 
