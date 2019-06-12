@@ -1,8 +1,11 @@
 -
     year: 2019
     books:
+        -   title: "Le Monde de Rocannon — Le cycle de Hain, Tome 1"
+            authors: "Ursula Le Guin"
+            url: "https://www.livredepoche.com/livre/le-monde-de-rocannon-le-cycle-de-hain-tome-1-9782253072485"
         -   title: "Le Maître du Haut Château"
-            authors: "Philip K. Dick "
+            authors: "Philip K. Dick"
             url: "https://www.jailu.com/Catalogue/science-fiction/le-maitre-du-haut-chateau"
         -   title: "So phare away"
             authors: "Alain Damasio"
