@@ -1,6 +1,12 @@
 -
     year: 2019
     books:
+        -   title: "Lecteurs nés — Magie ex libris, Tome 2"
+            authors: "Jim C. Hines"
+            url: "https://www.l-atalante.com/catalogue/la-dentelle-du-cygne/lecteurs-nes-9782841728053/"
+        -   title: "Le bibliomancien — Magie ex libris, Tome 1"
+            authors: "Jim C. Hines"
+            url: "https://www.l-atalante.com/catalogue/la-dentelle-du-cygne/le-bibliomancien-9782841727582/"
         -   title: "Le Monde de Rocannon — Le cycle de Hain, Tome 1"
             authors: "Ursula Le Guin"
             url: "https://www.livredepoche.com/livre/le-monde-de-rocannon-le-cycle-de-hain-tome-1-9782253072485"
