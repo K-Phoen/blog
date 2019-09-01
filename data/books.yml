@@ -1,6 +1,9 @@
 -
     year: 2019
     books:
+        -   title: "Le graal du gobelin"
+            authors: "Jim C. Hines"
+            url: "https://www.l-atalante.com/catalogue/la-dentelle-du-cygne/le-graal-du-gobelin-9782841727926/"
         -   title: "Sur épreuves  — Magie ex libris, Tome 3"
             authors: "Jim C. Hines"
             url: "https://www.l-atalante.com/catalogue/la-dentelle-du-cygne/sur-epreuves-9782841728688/"
