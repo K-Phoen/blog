@@ -1,6 +1,9 @@
 -
     year: 2019
     books:
+        -   title: "Millenium — Les Hommes qui n'aimaient pas les femmes"
+            authors: "Stieg Larsson"
+            url: "https://www.actes-sud.fr/catalogue/romans-policiers/millenium-1-les-hommes-qui-naimaient-pas-les-femmes-ne"
         -   title: "Le graal du gobelin"
             authors: "Jim C. Hines"
             url: "https://www.l-atalante.com/catalogue/la-dentelle-du-cygne/le-graal-du-gobelin-9782841727926/"
