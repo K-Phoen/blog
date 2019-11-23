@@ -1,6 +1,9 @@
 -
     year: 2019
     books:
+        -   title: "Early Riser"
+            authors: "Jesper FForde"
+            url: "http://www.jasperfforde.com/riser/riser.html"
         -   title: "The Time Machine"
             authors: "H. G. Wells"
             url: "https://www.penguin.co.uk/books/183/183800/the-time-machine/9780141199344.html"
