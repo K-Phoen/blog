@@ -14,8 +14,8 @@ jobs:
         with:
           files: ./content/
 
-  misspell:
-    name: misspell
+  language:
+    name: Language
     runs-on: ubuntu-latest
 
     steps:
@@ -23,24 +23,17 @@ jobs:
         with:
           depth: 1
 
-      - uses: reviewdog/action-misspell@v1
+      - name: misspell
+        uses: reviewdog/action-misspell@v1
         with:
           github_token: ${{ github.token }}
           locale: "US"
 
-  alex:
-    name: alex
-    runs-on: ubuntu-latest
+      - name: alexjs
+        uses: theashraf/alex-action@master
 
-    steps:
-      - uses: actions/checkout@v1
-        with:
-          depth: 1
-
-      - uses: theashraf/alex-action@master
-
-  hugo:
-    name: hugo
+  build:
+    name: build
     runs-on: ubuntu-latest
 
     steps:
