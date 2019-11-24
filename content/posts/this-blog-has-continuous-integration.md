@@ -1,7 +1,6 @@
 ---
 title: This blog has continuous integration
 date: 2019-11-24
-draft: true
 ---
 
 It's probably not a surprise for most of the people reading this blog but I am
