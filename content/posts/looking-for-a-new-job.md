@@ -40,7 +40,7 @@ But after a while, I felt like I was stagnating.
 I felt comfortable in this company and [I was absolutely not afraid of Mondays](https://imgs.xkcd.com/comics/weekend.png)
 but the excitement was gone. My work was not really challenging anymore.
 
-That's why I decided that it was time for me to move on to something different. 
+That's why I decided that it was time for me to move on to something different.
 Something that would stimulate and challenge me everyday, where I could learn
 new stuff and also maybe have a more positive impact on the outside world.
 
@@ -74,7 +74,7 @@ with smaller projects and impacts.
 
 For instance, I would love working with researchers in biology or physics. I
 could make my technical expertise available and contribute with my skills to
-help them in their day to day work.  
+help them in their day to day work.
 Another thing I can totally see myself do is providing tools for other teams
 and developers. Working in an SRE team would be awesome too.
 

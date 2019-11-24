@@ -37,10 +37,10 @@ protocols to detect node failures. When a failure is detected, it is usually
 communicated to the cluster using some kind of broadcast or multicast subsystem.
 
 We could summarize the process like this:
- * every node sends an "heartbeat signal" every <code>T</code> interval of time to all
-    other nodes ;
- * if no heartbeat from a node <code>N</code> is received after <code>T*limit</code>,
-    the non-responsive node is considered dead.
+* every node sends an "heartbeat signal" every <code>T</code> interval of time to all
+  other nodes ;
+* if no heartbeat from a node <code>N</code> is received after <code>T*limit</code>,
+  the non-responsive node is considered dead.
 
 <figure>
     <img src="/img/heartbeat.svg" />
@@ -428,6 +428,7 @@ And last but not least, the Go implementation of their modified version of *SWIM
 is Open-Source and available on GitHub: [https://github.com/hashicorp/memberlist](https://github.com/hashicorp/memberlist)
 
 Here is how a node joins a cluster, using the memberlist library:
+
 ```go
 /* Create the initial memberlist from a safe configuration.
    Please reference the godoc for other default config types.
@@ -474,4 +475,3 @@ But that's for another day, in another post!
 * [SWIM: Scalable Weakly-consistent Infection-style Process Group Membership Protocol](https://www.cs.cornell.edu/projects/Quicksilver/public_pdfs/SWIM.pdf)
 * [Armon Dadgar from HashiCorp presents the SWIM protocol](https://www.youtube.com/watch?v=bkmbWsDz8LM)
 * [https://en.wikipedia.org/wiki/Gossip_protocol](https://en.wikipedia.org/wiki/Gossip_protocol)
-

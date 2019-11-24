@@ -6,7 +6,6 @@ date: 2013-10-14
 
 **Important** : as j0k pointed out in the comments, Symfony 2.5 changed the way validation files are loaded. Refer to [this StackOverflow answer](http://stackoverflow.com/questions/24064813/how-to-split-validation-yaml-files-in-symfony-2-5/24210501#24210501) if you are using Symfony >= 2.5.
 
-
 Defining validation rules for several entities in the same file can really be a pain. Unfortunately, Symfony2 only looks in the *validation.yml* file by default.
 Let's see how we can split the following file:
 

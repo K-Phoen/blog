@@ -61,7 +61,7 @@ Split vendor bundles configurations and import them in `app/config/config.yml`.<
 * use a semantic configuration
 * inject configuration parameters in your services
 * environment variables (defined in apache/nginx) can be used!
-* know how [tagged services](http://symfony.com/doc/current/components/dependency_injection/tags.html) and [compiler passes ](http://symfony.com/doc/current/cookbook/service_container/compiler_passes.html) work
+* know how [tagged services](http://symfony.com/doc/current/components/dependency_injection/tags.html) and [compiler passes](http://symfony.com/doc/current/cookbook/service_container/compiler_passes.html) work
 
 ## Dependencies management
 

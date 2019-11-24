@@ -60,7 +60,6 @@ Humbug manipulate your code? How are mutations generated?
 What follows is a redacted transcription of my investigation in Humbug's source
 code.
 
-
 ### First step: `composer.json`
 
 I'll use the `composer.json` file as entry point to this analysis. The goal here
@@ -107,7 +106,7 @@ manipulation is in Humbug's repository.
 When I open the sources, the [`Mutator`](https://github.com/padraic/humbug/tree/06b1c059e432dab8c22c36bc8b6e1ffc7e587c07/src/Mutator)
 directory immediately catches my eye. So let's see what's inside.
 
-```
+```sh
 src/Mutator
 ├── Arithmetic
 ├── Boolean
