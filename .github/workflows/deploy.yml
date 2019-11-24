@@ -1,0 +1,22 @@
+name: Deploy
+on:
+  push:
+    branches: [master]
+
+
+jobs:
+  hugo_deploy:
+    name: Hugo
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          depth: 1
+          submodules: true
+          token: ${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}
+
+      - uses: K-Phoen/hugo-gh-pages-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}
+
