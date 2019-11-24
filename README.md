@@ -8,6 +8,10 @@
 
 You should have a server up and running locally at <http://localhost:1313>.
 
+## Creating a new post
+
+`hugo new posts/this-blog-has-continuous-integration.md`
+
 ## Deployment
 
 Automated using a [Github Action](https://github.com/K-Phoen/blog/blob/master/.github/workflows/deploy.yml).
