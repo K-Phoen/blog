@@ -1,5 +1,7 @@
 {
   "default": true,
   "no-inline-html": false,
+  "no-hard-tabs": false,
+  "no-trailing-punctuation": false,
   "line-length": false
 }
