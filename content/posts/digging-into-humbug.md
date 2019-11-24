@@ -5,8 +5,8 @@ description: >
     How does Humbug mutate source code?
 tldr: >
     In the end, the mutation generation by Humbug is *pretty straightforward*:
-    
- 
+
+
     1. it starts by splitting the code in tokens, using the standard `token_get_all()` function
 
     2. then it applies a list of *mutators* to the previously generated tokens. A mutator being responsible to alter tokens (ie: replacing a `+` with a `-`)
@@ -14,7 +14,7 @@ tldr: >
     3. once all the mutators are applied, it uses the tokens to rebuild the source code.
 
     4. code having changed, the unit tests should fail. So it launches them and expects failures.
-    
+
 
     Now I see why I didn't find something like nikic/PHP-parser in the dependencies:
     it simply would have been overkill and too complex to work with an AST.
@@ -22,7 +22,7 @@ tldr: >
 
 While I've already used [Humbug](https://github.com/padraic/humbug) a few time,
 a [recent article](http://blog.eleven-labs.com/en/mutation-testing-check-quality-unit-tests/)
-made my realise that I didn't really know how it worked.
+made my realize that I didn't really know how it worked.
 
 That's when I got the idea to dig into Humbug to learn how it works, and publish
 my findings here.
@@ -60,11 +60,10 @@ Humbug manipulate your code? How are mutations generated?
 What follows is a redacted transcription of my investigation in Humbug's source
 code.
 
-
 ### First step: `composer.json`
 
 I'll use the `composer.json` file as entry point to this analysis. The goal here
-is to see if there is a dependency that could be use to analyse and manipulate
+is to see if there is a dependency that could be use to analyze and manipulate
 source code. I'm thinking about a library like
 [nikic/PHP-Parser](https://github.com/nikic/PHP-Parser) for instance.
 
@@ -107,7 +106,7 @@ manipulation is in Humbug's repository.
 When I open the sources, the [`Mutator`](https://github.com/padraic/humbug/tree/06b1c059e432dab8c22c36bc8b6e1ffc7e587c07/src/Mutator)
 directory immediately catches my eye. So let's see what's inside.
 
-```
+```sh
 src/Mutator
 ├── Arithmetic
 ├── Boolean

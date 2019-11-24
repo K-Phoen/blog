@@ -44,7 +44,7 @@ Split vendor bundles configurations and import them in `app/config/config.yml`.<
 
 * should be lightweight
   * do not put logic in them, write handlers/services instead
-* avoid extending FrameworkBundle/Controller (expecially if your controller is meant to be distributed)
+* avoid extending FrameworkBundle/Controller (especially if your controller is meant to be distributed)
   * see http://richardmiller.co.uk/2011/06/14/symfony2-moving-away-from-the-base-controller/
   * define them as services
 * inject the request into controller actions parameters
@@ -61,7 +61,7 @@ Split vendor bundles configurations and import them in `app/config/config.yml`.<
 * use a semantic configuration
 * inject configuration parameters in your services
 * environment variables (defined in apache/nginx) can be used!
-* know how [tagged services](http://symfony.com/doc/current/components/dependency_injection/tags.html) and [compiler passes ](http://symfony.com/doc/current/cookbook/service_container/compiler_passes.html) work
+* know how [tagged services](http://symfony.com/doc/current/components/dependency_injection/tags.html) and [compiler passes](http://symfony.com/doc/current/cookbook/service_container/compiler_passes.html) work
 
 ## Dependencies management
 

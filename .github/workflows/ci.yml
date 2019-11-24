@@ -1,0 +1,55 @@
+name: CI
+on: [pull_request]
+
+jobs:
+  markdown:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          depth: 1
+
+      - uses: nosborn/github-action-markdown-cli@master
+        with:
+          files: ./content/
+
+  misspell:
+    name: misspell
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          depth: 1
+
+      - uses: reviewdog/action-misspell@v1
+        with:
+          github_token: ${{ github.token }}
+          locale: "US"
+
+  alex:
+    name: alex
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          depth: 1
+
+      - uses: theashraf/alex-action@master
+
+  hugo:
+    name: hugo
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          depth: 1
+
+      - uses: peaceiris/actions-hugo@v2.3.0
+        with:
+          hugo-version: '0.59.1'
+
+      - run: hugo
