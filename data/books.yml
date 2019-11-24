@@ -1,6 +1,9 @@
 -
     year: 2019
     books:
+        -   title: "Start-Up Generation"
+            authors: "Marc Dubuisson"
+            url: "https://librairie.lapin.org/librairie/429-startup-generation.html"
         -   title: "Early Riser"
             authors: "Jesper FForde"
             url: "http://www.jasperfforde.com/riser/riser.html"
