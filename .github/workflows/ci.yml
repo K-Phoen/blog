@@ -10,8 +10,7 @@ jobs:
         with:
           depth: 1
 
-      - name: markdownlint-cli
-        uses: nosborn/github-action-markdown-cli@master
+      - uses: nosborn/github-action-markdown-cli@master
         with:
           files: ./content/
 
@@ -24,8 +23,7 @@ jobs:
         with:
           depth: 1
 
-      - name: misspell
-        uses: reviewdog/action-misspell@v1
+      - uses: reviewdog/action-misspell@v1
         with:
           github_token: ${{ github.token }}
           locale: "US"
