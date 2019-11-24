@@ -23,8 +23,7 @@ jobs:
         with:
           depth: 1
 
-      - name: misspell
-        uses: reviewdog/action-misspell@v1
+      - uses: reviewdog/action-misspell@v1
         with:
           github_token: ${{ github.token }}
           locale: "US"
@@ -33,7 +32,6 @@ jobs:
         uses: theashraf/alex-action@master
 
   build:
-    name: build
     runs-on: ubuntu-latest
 
     steps:
