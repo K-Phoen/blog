@@ -1,6 +1,6 @@
 ---
 title: "Clusters and data sharding: introducing rendezvous hashing"
-date: 2019-04-11 CET
+date: 2019-04-11
 ---
 
 In a [previous article](/2019/01/29/clusters-and-membership-discovering-the-swim-protocol/),
