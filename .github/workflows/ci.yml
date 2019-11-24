@@ -23,17 +23,16 @@ jobs:
         with:
           depth: 1
 
-      - name: misspell
-        uses: reviewdog/action-misspell@v1
+      - uses: K-Phoen/action-misspell@master
         with:
           github_token: ${{ github.token }}
+          reporter: github-pr-review
           locale: "US"
 
       - name: alexjs
         uses: theashraf/alex-action@master
 
   build:
-    name: build
     runs-on: ubuntu-latest
 
     steps:

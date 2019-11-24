@@ -1,4 +1,4 @@
-# My Blog ![](https://github.com/K-Phoen/blog/workflows/ci/badge.svg)
+# My Blog ![](https://github.com/K-Phoen/blog/workflows/CI/badge.svg)
 
 ## Installation
 
