@@ -32,8 +32,8 @@ jobs:
       - name: alexjs
         uses: theashraf/alex-action@master
 
-  hugo:
-    name: hugo
+  build:
+    name: build
     runs-on: ubuntu-latest
 
     steps:
