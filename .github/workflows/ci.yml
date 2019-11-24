@@ -38,3 +38,18 @@ jobs:
           depth: 1
 
       - uses: theashraf/alex-action@master
+
+  hugo:
+    name: hugo
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          depth: 1
+
+      - uses: peaceiris/actions-hugo@v2.3.0
+        with:
+          hugo-version: '0.59.1'
+
+      - run: hugo
