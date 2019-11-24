@@ -37,6 +37,7 @@ protocols to detect node failures. When a failure is detected, it is usually
 communicated to the cluster using some kind of broadcast or multicast subsystem.
 
 We could summarize the process like this:
+
 * every node sends an "heartbeat signal" every <code>T</code> interval of time to all
   other nodes ;
 * if no heartbeat from a node <code>N</code> is received after <code>T*limit</code>,
