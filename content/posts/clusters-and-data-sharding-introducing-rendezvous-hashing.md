@@ -116,7 +116,7 @@ Here is what the server selection could look like, implemented in Go:
 
 func (n Node) weight(key string) int {
 	// usually, you would find a way to merge the two hashed instead
-	// of concatenating the server's adress, the key and hashing the
+	// of concatenating the server's address, the key and hashing the
 	// result. The original paper suggests:
 	// a = 1103515245
 	// b = 12345
