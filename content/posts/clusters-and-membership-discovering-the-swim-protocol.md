@@ -178,10 +178,10 @@ allowing it to gradually receive information about all the nodes of the cluster.
 
 If we sum up what *SWIM* does so far:
 
- * it splits the failure detection and the dissemination components ;
- * each node of the cluster periodically check the health of a random node of
-     its memberlist (either directly or indirectly) ;
- * <code>join()</code> and <code>failed()</code> events are multicast.
+* it splits the failure detection and the dissemination components ;
+* each node of the cluster periodically check the health of a random node of
+  its memberlist (either directly or indirectly) ;
+* <code>join()</code> and <code>failed()</code> events are multicast.
 
 So given our evaluation criteria, what can we say about the protocol?
 
@@ -221,16 +221,16 @@ The version of the *SWIM* protocol we described so far could be qualified as «
 *basic SWIM* ». It works and showcases the main ideas of the protocol, but it
 suffers from a few issues and limitations:
 
- * the dissemination component still relies on network multicasts. However,
-    network multicast primitives such as IP multicast etc., are only best-effort
-    and most of the time they aren't even enabled on production systems ;
- * the failure detector doesn't handle well nodes that are perturbed for small
-    durations of time (overloaded host, unexpectedly long GC pause, …) ;
- * the basic SWIM failure detection protocol guarantees eventual detection of
-    the failure of an arbitrary node. However, it gives no deterministic
-    guarantees on the time between failure of an arbitrary node and its
-    detection at another arbitrary member (in terms of the number of local
-    protocol rounds).
+* the dissemination component still relies on network multicasts. However,
+  network multicast primitives such as IP multicast etc., are only best-effort
+  and most of the time they aren't even enabled on production systems ;
+* the failure detector doesn't handle well nodes that are perturbed for small
+   durations of time (overloaded host, unexpectedly long GC pause, …) ;
+* the basic SWIM failure detection protocol guarantees eventual detection of
+  the failure of an arbitrary node. However, it gives no deterministic
+  guarantees on the time between failure of an arbitrary node and its
+  detection at another arbitrary member (in terms of the number of local
+  protocol rounds).
 
 Let's dig in these limitations to better understand them and see what can be
 done to go around.
@@ -265,14 +265,14 @@ The network load remains the same as seen previously.
 In the following example, we see how piggybacking can be used to disseminate
 information:
 
- 1. *A* knows that *C* is dead ;
- 2. *D* knows that *E* joined the cluster ;
- 3. *A* directly probes *B* and includes a gossip indicating that *C* should be
-    considered as failed. *B* acknowledges and updates its own memberlist to
-    remove *C* ;
- 4. *A* directly probes *D* and also indicates that *C* is dead. *D*
-    acknowledges and piggybacks the <code>ACK</code> packet to indicate that a
-    new node *E* has joined the cluster.
+1. *A* knows that *C* is dead ;
+2. *D* knows that *E* joined the cluster ;
+3. *A* directly probes *B* and includes a gossip indicating that *C* should be
+   considered as failed. *B* acknowledges and updates its own memberlist to
+   remove *C* ;
+4. *A* directly probes *D* and also indicates that *C* is dead. *D*
+   acknowledges and piggybacks the <code>ACK</code> packet to indicate that a
+   new node *E* has joined the cluster.
 
 <figure>
     <img src="/img/swim_piggybacking.svg" />
@@ -359,11 +359,11 @@ For instance:
     <figcaption>Two nodes, receiving unambiguous updates</figcaption>
 </figure>
 
- * receiving the message <code>{ Alive C, incarnation = 1 }</code> would override
-     the message <code>{ Suspect C, incarnation = 0 }</code> as the incarnation
-     number of the suspected *C* node is less than the alive *C* node.
- * on the other hand, the message <code>{ Alive C, incarnation = 1 }</code>
-     would not be overridden by <code>{ Suspect C, incarnation = 0 }</code>
+* receiving the message <code>{ Alive C, incarnation = 1 }</code> would override
+  the message <code>{ Suspect C, incarnation = 0 }</code> as the incarnation
+  number of the suspected *C* node is less than the alive *C* node.
+* on the other hand, the message <code>{ Alive C, incarnation = 1 }</code>
+  would not be overridden by <code>{ Suspect C, incarnation = 0 }</code>
 
 By comparing *incarnation numbers*, we can safely drop outdated messages and
 still end-up in a coherent state across the cluster.
@@ -386,32 +386,32 @@ detection time of a node failure.
 
 ## Summary
 
- * *SWIM* is a membership protocol designed to answer the question « *Which are
-    the alive nodes in a cluster?* » in a scalable way
- * the protocol is divided in two components: failure detection and information
-     dissemination
- * the failure detector works by directly or indirectly probing nodes, at fixed
-     intervals
- * the suspicion sub-protocol improves the failure detector's accuracy by giving
-     time to nodes for recovery
- * information about the status of the cluster is disseminated using a
-     infection-style method: events are included in the failure detection
-     component and propagated as an infection or gossip would in real life, from
-     peer to peer
- * selected nodes to probe using a randomized round-robin makes the failure
-     detection deterministic
+* *SWIM* is a membership protocol designed to answer the question « *Which are
+  the alive nodes in a cluster?* » in a scalable way
+* the protocol is divided in two components: failure detection and information
+  dissemination
+* the failure detector works by directly or indirectly probing nodes, at fixed
+  intervals
+* the suspicion sub-protocol improves the failure detector's accuracy by giving
+  time to nodes for recovery
+* information about the status of the cluster is disseminated using a
+  infection-style method: events are included in the failure detection
+  component and propagated as an infection or gossip would in real life, from
+  peer to peer
+* selected nodes to probe using a randomized round-robin makes the failure
+  detection deterministic
 
 ## Going further
 
 While we went pretty deep in the *memberlist* problem, there are still a lof of
 subjects we didn't explore:
 
- * what happens in case of network partitions?
- * how does *SWIM* deal with nodes voluntarily leaving the cluster?
- * what about nodes re-joining?
- * we totally ignored security. Shouldn't the communications between nodes at
-     least be encrypted?
- * etc.
+* what happens in case of network partitions?
+* how does *SWIM* deal with nodes voluntarily leaving the cluster?
+* what about nodes re-joining?
+* we totally ignored security. Shouldn't the communications between nodes at
+  least be encrypted?
+* etc.
 
 Some of these concerns — and more — are addressed in [Serf](https://www.serf.io/).
 Two of [HashiCorp](https://www.hashicorp.com/)'s products rely on a version of
@@ -471,7 +471,7 @@ But that's for another day, in another post!
 
 ## Links
 
- * [SWIM: Scalable Weakly-consistent Infection-style Process Group Membership Protocol](https://www.cs.cornell.edu/projects/Quicksilver/public_pdfs/SWIM.pdf)
- * [Armon Dadgar from HashiCorp presents the SWIM protocol](https://www.youtube.com/watch?v=bkmbWsDz8LM)
- * [https://en.wikipedia.org/wiki/Gossip_protocol](https://en.wikipedia.org/wiki/Gossip_protocol)
+* [SWIM: Scalable Weakly-consistent Infection-style Process Group Membership Protocol](https://www.cs.cornell.edu/projects/Quicksilver/public_pdfs/SWIM.pdf)
+* [Armon Dadgar from HashiCorp presents the SWIM protocol](https://www.youtube.com/watch?v=bkmbWsDz8LM)
+* [https://en.wikipedia.org/wiki/Gossip_protocol](https://en.wikipedia.org/wiki/Gossip_protocol)
 
