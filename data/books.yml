@@ -1,6 +1,9 @@
 -
     year: 2019
     books:
+        -   title: "Death's End"
+            authors: "Liu Cixin"
+            url: "https://www.amazon.com/Deaths-End-Remembrance-Earths-Past/dp/0765377101"
         -   title: "Start-Up Generation"
             authors: "Marc Dubuisson"
             url: "https://librairie.lapin.org/librairie/429-startup-generation.html"
