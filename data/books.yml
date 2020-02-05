@@ -1,6 +1,9 @@
 -
     year: 2020
     books:
+        -   title: "Head On"
+            authors: "John Scalzi"
+            url: "https://www.tor.com/2018/03/13/excerpts-john-scalzi-head-on/"
         -   title: "Artemis"
             authors: "Andy Weir"
             url: "https://www.penguinrandomhouse.com/books/250305/artemis-by-andy-weir/9780553448122"
