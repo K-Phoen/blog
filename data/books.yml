@@ -1,6 +1,9 @@
 -
     year: 2020
     books:
+        -   title: "Broken Stars"
+            authors: "Ken Liu"
+            url: "https://headofzeus.com/books/9781788548090"
         -   title: "Ball Lightning"
             authors: "Liu Cixin"
             url: "https://www.tor.com/2018/08/14/book-reviews-cixin-liu-ball-lightning/"
