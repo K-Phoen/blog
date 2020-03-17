@@ -1,6 +1,9 @@
 -
     year: 2020
     books:
+        -   title: "The Phoenix Project"
+            authors: "Gene Kim, Kevin Behr, George Spafford"
+            url: "https://itrevolution.com/book/the-phoenix-project/"
         -   title: "Broken Stars"
             authors: "Ken Liu"
             url: "https://headofzeus.com/books/9781788548090"
