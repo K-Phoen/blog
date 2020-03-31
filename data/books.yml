@@ -1,6 +1,9 @@
 -
     year: 2020
     books:
+        -   title: "Millenium — La Fille qui rêvait d'un bidon d'essence et d'une allumette"
+            authors: "Stieg Larsson"
+            url: "https://www.actes-sud.fr/node/52762"
         -   title: "The Phoenix Project"
             authors: "Gene Kim, Kevin Behr, George Spafford"
             url: "https://itrevolution.com/book/the-phoenix-project/"
@@ -42,7 +45,7 @@
             url: "https://canongate.co.uk/books/2431-notes-from-a-coma/"
         -   title: "Millenium — Les Hommes qui n'aimaient pas les femmes"
             authors: "Stieg Larsson"
-            url: "https://www.actes-sud.fr/catalogue/romans-policiers/millenium-1-les-hommes-qui-naimaient-pas-les-femmes-ne"
+            url: "https://www.actes-sud.fr/node/52761"
         -   title: "Le graal du gobelin"
             authors: "Jim C. Hines"
             url: "https://www.l-atalante.com/catalogue/la-dentelle-du-cygne/le-graal-du-gobelin-9782841727926/"
@@ -141,10 +144,10 @@
             url: "http://www.denoel.fr/Catalogue/DENOEL/Lunes-d-encre/Spin"
         -   title: "La forêt sombre"
             authors: "Liu Cixin"
-            url: "https://www.actes-sud.fr/catalogue/science-fiction-fantasy/la-foret-sombre"
+            url: "https://www.actes-sud.fr/node/61142"
         -   title: "Le problème à trois corps"
             authors: "Liu Cixin"
-            url: "https://www.actes-sud.fr/catalogue/science-fiction-fantasy/le-probleme-trois-corps"
+            url: "https://www.actes-sud.fr/node/56894"
         -   title: "Le Regard"
             authors: "Ken Liu"
             url: https://www.belial.fr/ken-liu/le-regard
