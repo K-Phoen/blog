@@ -1,6 +1,9 @@
 -
     year: 2020
     books:
+        -   title: "Chernobyl: History of a tragedy"
+            authors: "Serhii Plokhy"
+            url: "https://www.penguin.co.uk/books/309/309197/chernobyl/9780141988351.html"
         -   title: "Millenium — La Fille qui rêvait d'un bidon d'essence et d'une allumette"
             authors: "Stieg Larsson"
             url: "https://www.actes-sud.fr/node/52762"
