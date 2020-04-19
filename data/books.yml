@@ -1,6 +1,9 @@
 -
     year: 2020
     books:
+        -   title: "Sleeping Giants"
+            authors: "Sylvain Neuvel"
+            url: "https://www.penguin.co.uk/books/286/286671/sleeping-giants/9781405941730.html"
         -   title: "Chernobyl: History of a tragedy"
             authors: "Serhii Plokhy"
             url: "https://www.penguin.co.uk/books/309/309197/chernobyl/9780141988351.html"
