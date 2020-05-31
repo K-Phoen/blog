@@ -1,6 +1,12 @@
 -
     year: 2020
     books:
+        -   title: "The Left Hand of Darkness"
+            authors: "Ursula K. Le Guin"
+            url: "https://www.amazon.com/Left-Hand-Darkness-S-F-MASTERWORKS-ebook/dp/B01NCU4VNT"
+        -   title: "The Future of Humanity"
+            authors: "Michio Kaku"
+            url: "https://www.penguin.co.uk/books/305/305395/the-future-of-humanity/9780141986067.html"
         -   title: "Sleeping Giants"
             authors: "Sylvain Neuvel"
             url: "https://www.penguin.co.uk/books/286/286671/sleeping-giants/9781405941730.html"
