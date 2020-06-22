@@ -1,6 +1,9 @@
 -
     year: 2020
     books:
+        -   title: "The Axeman's Jazz"
+            authors: "Ray Celestin"
+            url: "https://www.panmacmillan.com/authors/ray-celestin/the-axeman-s-jazz/9781447258889"
         -   title: "The Left Hand of Darkness"
             authors: "Ursula K. Le Guin"
             url: "https://www.amazon.com/Left-Hand-Darkness-S-F-MASTERWORKS-ebook/dp/B01NCU4VNT"
