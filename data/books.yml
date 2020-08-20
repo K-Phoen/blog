@@ -1,6 +1,18 @@
 -
     year: 2020
     books:
+        -   title: "The Calculating Stars"
+            authors: "Mary Robinette Kowal"
+            url: "https://maryrobinettekowal.com/writing/the-calculating-stars/"
+        -   title: "Recursion"
+            authors: "Blake Crouch"
+            url: "https://www.amazon.com/Recursion-Novel-Blake-Crouch/dp/1524759783"
+        -   title: "NK3"
+            authors: "Michael Tolkin"
+            url: "https://www.amazon.com/NK3-Novel-Michael-Tolkin/dp/0802125433"
+        -   title: "The Boy on the Bridge"
+            authors: "Mike Carey"
+            url: "https://www.amazon.com/Boy-Bridge-M-R-Carey-ebook/dp/B01LL8BX9Q"
         -   title: "The Axeman's Jazz"
             authors: "Ray Celestin"
             url: "https://www.panmacmillan.com/authors/ray-celestin/the-axeman-s-jazz/9781447258889"
