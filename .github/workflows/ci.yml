@@ -6,9 +6,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-        with:
-          depth: 1
+      - uses: actions/checkout@v2
 
       - uses: nosborn/github-action-markdown-cli@master
         with:
@@ -40,7 +38,7 @@ jobs:
         with:
           depth: 1
 
-      - uses: peaceiris/actions-hugo@v2.3.0
+      - uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.59.1'
 
