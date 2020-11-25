@@ -1,6 +1,15 @@
 -
     year: 2020
     books:
+        -   title: "Waste Tide"
+            authors: "Chen Qiufan"
+            url: "https://headofzeus.com/books/9781784977924"
+        -   title: "Manifold Time"
+            authors: "Stephen Baxter"
+            url: "https://www.penguinrandomhouse.com/books/9890/manifold-time-by-stephen-baxter/"
+        -   title: "Solaris"
+            authors: "Stanisław Lem"
+            url: "https://www.tor.com/2019/08/01/embracing-the-impossible-puzzle-of-stanislaw-lems-solaris/"
         -   title: "Flatland"
             authors: "Edwin A. Abbott"
             url: "https://www.amazon.com/Flatland-Romance-Dimensions-Thrift-Editions/dp/048627263X/"
