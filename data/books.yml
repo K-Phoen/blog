@@ -1,6 +1,12 @@
 -
     year: 2020
     books:
+        -   title: "Qualityland"
+            authors: "Marc-Uwe Kling"
+            url: "https://www.amazon.com/Qualityland-Marc-Uwe-Kling/dp/1538732963"
+        -   title: "Les furtifs"
+            authors: "Alain Damasio"
+            url: "https://lavolte.net/livres/les-furtifs-alain-damasio/"
         -   title: "Waste Tide"
             authors: "Chen Qiufan"
             url: "https://headofzeus.com/books/9781784977924"
