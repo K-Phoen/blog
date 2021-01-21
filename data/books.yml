@@ -1,4 +1,13 @@
 -
+    year: 2021
+    books:
+        -   title: "Children of Time"
+            authors: "Adrian Tchaikovsky"
+            url: "https://www.amazon.com/Children-Time-Adrian-Tchaikovsky/dp/1447273303"
+        -   title: "The Relentless Moon"
+            authors: "Mary Robinette Kowal"
+            url: "https://www.amazon.com/Relentless-Moon-Lady-Astronaut-Novel/dp/1250236967"
+-
     year: 2020
     books:
         -   title: "Qualityland"
