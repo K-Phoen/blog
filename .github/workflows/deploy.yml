@@ -8,6 +8,8 @@ jobs:
     name: Hugo
     runs-on: ubuntu-latest
 
+    if: "!contains(github.event.head_commit.message, 'Automatic deployment')"
+
     steps:
       - uses: actions/checkout@v2
         with:
