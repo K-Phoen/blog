@@ -1,6 +1,9 @@
 -
     year: 2021
     books:
+        -   title: "Accelerando"
+            authors: "Charles Stross"
+            url: "https://www.amazon.co.uk/Accelerando-Charles-Stross/dp/2253098701"
         -   title: "Exhalation"
             authors: "Ted Chiang"
             url: "https://www.amazon.com/Exhalation-Stories-Ted-Chiang/dp/1101947888"
