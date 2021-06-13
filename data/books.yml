@@ -1,9 +1,15 @@
 -
     year: 2021
     books:
+        -   title: "Seveneves"
+            authors: "Neal Stephenson"
+            url: "https://www.amazon.se/gp/product/0008132542"
         -   title: "Accelerando"
             authors: "Charles Stross"
             url: "https://www.amazon.co.uk/Accelerando-Charles-Stross/dp/2253098701"
+        -   title: "The Fated Sky"
+            authors: "Mary Robinette Kowal"
+            url: "https://www.amazon.se/gp/product/076539894X"
         -   title: "Exhalation"
             authors: "Ted Chiang"
             url: "https://www.amazon.com/Exhalation-Stories-Ted-Chiang/dp/1101947888"
