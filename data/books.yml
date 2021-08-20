@@ -1,6 +1,12 @@
 -
     year: 2021
     books:
+        -   title: "The Memory Police"
+            authors: "Yōko Ogawa"
+            url: "https://www.penguinrandomhouse.com/books/252774/the-memory-police-by-yoko-ogawa/"
+        -   title: "The Word for World is Forest"
+            authors: "Ursula K. Le Guin"
+            url: "https://www.amazon.com/Word-World-Forest-S-F-MASTERWORKS-ebook/dp/B00OOQJALQ"
         -   title: "The Children of Men"
             authors: "P.D James"
             url: "https://www.amazon.com/Children-Men-P-D-James/dp/0307275434/"
