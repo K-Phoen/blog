@@ -1,6 +1,12 @@
 -
     year: 2021
     books:
+        -   title: "La prostituée"
+            authors: "Hayama Yoshiki"
+            url: "https://www.editions-allia.com/fr/livre/922/la-prostituee"
+        -   title: "Red Mars"
+            authors: "Kim Stanley Robinson"
+            url: "https://www.amazon.com/Red-Mars-Trilogy-Stanley-Robinson/dp/0553560735"
         -   title: "The Memory Police"
             authors: "Yōko Ogawa"
             url: "https://www.penguinrandomhouse.com/books/252774/the-memory-police-by-yoko-ogawa/"
