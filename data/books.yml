@@ -1,6 +1,15 @@
 -
     year: 2021
     books:
+        -   title: "Attack Surface"
+            authors: "Cory Doctorow"
+            url: "https://us.macmillan.com/books/9781250757531/attacksurface"
+        -   title: "Klara and the Sun"
+            authors: "Kazuo Ishiguro"
+            url: "https://www.faber.co.uk/product/9780571364879-klara-and-the-sun/"
+        -   title: "Le bateau usine"
+            authors: "Takiji Kobayashi"
+            url: "https://www.editions-allia.com/fr/livre/704/le-bateau-usine"
         -   title: "La prostituée"
             authors: "Hayama Yoshiki"
             url: "https://www.editions-allia.com/fr/livre/922/la-prostituee"
