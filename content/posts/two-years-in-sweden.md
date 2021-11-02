@@ -1,6 +1,6 @@
 ---
 title: Two years in Sweden
-date: 2021-11-01
+date: 2021-11-16
 
 tldr: >
     * A lot happened during these two years and a half of silence. This post is **me, taking a step back** and trying to put words on my growth.
@@ -17,6 +17,9 @@ work in Stockholm.
 
 Judging by the lack of content on this blog during this period, one could
 imagine that a lot has happened since.
+
+This post is me, taking a step back and trying to look back at what I've
+accomplished and how much I've grown as an engineer.
 
 <!--more-->
 
