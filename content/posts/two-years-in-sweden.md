@@ -1,6 +1,6 @@
 ---
 title: Two years in Sweden
-date: 2021-11-16
+date: 2021-11-15
 
 tldr: >
     * A lot happened during these two years and a half of silence. This post is **me, taking a step back** and trying to put words on my growth.
