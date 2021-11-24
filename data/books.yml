@@ -1,6 +1,9 @@
 -
     year: 2021
     books:
+        -   title: "The Redemption of Time"
+            authors: "Baoshu"
+            url: "https://www.tor.com/2019/05/14/the-redemption-of-time-preface/"
         -   title: "Attack Surface"
             authors: "Cory Doctorow"
             url: "https://us.macmillan.com/books/9781250757531/attacksurface"
@@ -16,6 +19,9 @@
         -   title: "Red Mars"
             authors: "Kim Stanley Robinson"
             url: "https://www.amazon.com/Red-Mars-Trilogy-Stanley-Robinson/dp/0553560735"
+        -   title: "We Are Legion (We Are Bob)"
+            authors: "Dennis E. Taylor"
+            url: "https://www.amazon.com/Are-Legion-Bob-Bobiverse-Book-ebook/dp/B01LWAESYQ"
         -   title: "The Memory Police"
             authors: "Yōko Ogawa"
             url: "https://www.penguinrandomhouse.com/books/252774/the-memory-police-by-yoko-ogawa/"
