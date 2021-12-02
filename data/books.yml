@@ -1,6 +1,12 @@
 -
     year: 2021
     books:
+        -   title: "Surrender"
+            authors: "Ray Loriga"
+            url: "https://www.amazon.com/Surrender-Ray-Loriga/dp/1328528529"
+        -   title: "The Supernova Era"
+            authors: "Liu Cixin"
+            url: "https://headofzeus.com/books/9781788542418"
         -   title: "The Redemption of Time"
             authors: "Baoshu"
             url: "https://www.tor.com/2019/05/14/the-redemption-of-time-preface/"
