@@ -1,6 +1,9 @@
 -
     year: 2021
     books:
+        -   title: "Composite Creatures"
+            authors: "Caroline Hardaker"
+            url: "https://angryrobotbooks.com/books/composite-creatures/"
         -   title: "Surrender"
             authors: "Ray Loriga"
             url: "https://www.amazon.com/Surrender-Ray-Loriga/dp/1328528529"
