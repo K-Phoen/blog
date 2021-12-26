@@ -1,6 +1,9 @@
 -
     year: 2021
     books:
+        -   title: "When the Sparrow Falls"
+            authors: "Neil Sharpson"
+            url: "https://us.macmillan.com/books/9781250784223/whenthesparrowfalls"
         -   title: "Composite Creatures"
             authors: "Caroline Hardaker"
             url: "https://angryrobotbooks.com/books/composite-creatures/"
