@@ -1,4 +1,16 @@
 -
+    year: 2022
+    books:
+        -   title: "The Test"
+            authors: "Sylvain Neuvel"
+            url: "https://publishing.tor.com/thetest-sylvainneuvel/9781250312822/"
+        -   title: "Untouched by Human Hands"
+            authors: "Robert Sheckley"
+            url: "https://www.penguin.co.uk/books/320/320418/untouched-by-human-hands/9780241473023.html"
+        -   title: "Green Mars"
+            authors: "Kim Stanley Robinson"
+            url: "https://www.amazon.com/Green-Mars-Trilogy-Stanley-Robinson/dp/0553572393/"
+-
     year: 2021
     books:
         -   title: "When the Sparrow Falls"
