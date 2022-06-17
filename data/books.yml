@@ -1,6 +1,18 @@
 -
     year: 2022
     books:
+        -   title: "Too Like the Lightni - Terra Ignota, 1"
+            authors: "Ada Palmer"
+            url: "https://headofzeus.com/books/9781786699480"
+        -   title: "The 2084 Report"
+            authors: "James Lawrence Powell"
+            url: "https://www.simonandschuster.com/books/The-2084-Report/James-Lawrence-Powell/9781982151188"
+        -   title: "Zero Bomb"
+            authors: "M.T. Hill"
+            url: "https://titanbooks.com/9725-zero-bomb/"
+        -   title: "Cat's Cradle"
+            authors: "Kurt Vonnegut"
+            url: "https://www.penguinrandomhouse.ca/books/184328/cats-cradle-by-kurt-vonnegut/9780385333481"
         -   title: "The Test"
             authors: "Sylvain Neuvel"
             url: "https://publishing.tor.com/thetest-sylvainneuvel/9781250312822/"
