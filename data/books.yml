@@ -1,7 +1,10 @@
 -
     year: 2022
     books:
-        -   title: "Too Like the Lightni - Terra Ignota, 1"
+        -   title: "Seven Surrenders - Terra Ignota, 2"
+            authors: "Ada Palmer"
+            url: "https://headofzeus.com/books/9781786699541"
+        -   title: "Too Like the Lightning - Terra Ignota, 1"
             authors: "Ada Palmer"
             url: "https://headofzeus.com/books/9781786699480"
         -   title: "The 2084 Report"
