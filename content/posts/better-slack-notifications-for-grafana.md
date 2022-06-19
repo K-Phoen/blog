@@ -1,7 +1,6 @@
 ---
 title: "Better slack notifications for Grafana"
 date: 2022-06-19
-draft: true
 ---
 
 While the introduction of Grafana's unified alerting system is an improvement, everything isn't perfect.
