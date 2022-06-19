@@ -11,7 +11,7 @@ jobs:
     if: "!contains(github.event.head_commit.message, 'Automatic deployment')"
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 1
           submodules: recursive
