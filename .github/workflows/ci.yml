@@ -6,9 +6,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - uses: nosborn/github-action-markdown-cli@v3.0.0
+      - uses: nosborn/github-action-markdown-cli@v3.1.0
         with:
           files: ./content/
           config_file: .markdownlint.json
@@ -18,13 +18,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-        with:
-          depth: 1
+      - uses: actions/checkout@v3
 
-      - uses: K-Phoen/action-misspell@master
+      - uses: reviewdog/action-misspell@master
         with:
-          github_token: ${{ github.token }}
           reporter: github-pr-review
           locale: "US"
 
@@ -35,9 +32,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-        with:
-          depth: 1
+      - uses: actions/checkout@v3
 
       - uses: peaceiris/actions-hugo@v2
         with:
