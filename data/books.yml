@@ -1,6 +1,12 @@
 -
     year: 2022
     books:
+        -   title: "Old Man's War"
+            authors: "John Scalzi"
+            url: "https://us.macmillan.com/books/9780765348272/oldmanswar"
+        -   title: "A Strange and Brilliant Light"
+            authors: "Eli Lee"
+            url: "https://www.jofletcherbooks.com/jo-fletcher-articles/jf-blog/2021/05/18/the-inspiration-behind-a-strange-and-brilliant-light/"
         -   title: "Seven Surrenders - Terra Ignota, 2"
             authors: "Ada Palmer"
             url: "https://headofzeus.com/books/9781786699541"
