@@ -1,6 +1,12 @@
 -
     year: 2022
     books:
+        -   title: "If Cats Disappeared from the World"
+            authors: "Genki Kawamura"
+            url: "https://www.panmacmillan.com/authors/genki-kawamura/if-cats-disappeared-from-the-world/9781509889174"
+        -   title: "Who Fears Death"
+            authors: "Nnedi Okorafor"
+            url: "https://nnedi.com/books/who-fears-death/"
         -   title: "Old Man's War"
             authors: "John Scalzi"
             url: "https://us.macmillan.com/books/9780765348272/oldmanswar"
