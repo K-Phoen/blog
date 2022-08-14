@@ -1,6 +1,12 @@
 -
     year: 2022
     books:
+        -   title: "Until the Last of Me"
+            authors: "Sylvain Neuvel"
+            url: "https://www.penguin.co.uk/books/316142/until-the-last-of-me-by-neuvel-sylvain/9780241445143"
+        -   title: "The Poppy War"
+            authors: "R.F. Kuang"
+            url: "https://www.harpercollins.com/products/the-poppy-war-r-f-kuang"
         -   title: "If Cats Disappeared from the World"
             authors: "Genki Kawamura"
             url: "https://www.panmacmillan.com/authors/genki-kawamura/if-cats-disappeared-from-the-world/9781509889174"
