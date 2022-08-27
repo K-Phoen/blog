@@ -1,6 +1,18 @@
 -
     year: 2022
     books:
+        -   title: "The Last Colony"
+            authors: "John Scalzi"
+            url: "https://us.macmillan.com/books/9780765356185/thelastcolony"
+        -   title: "The Ghost Brigades"
+            authors: "John Scalzi"
+            url: "https://us.macmillan.com/books/9780765354068/theghostbrigades"
+        -   title: "The Burning God"
+            authors: "R.F. Kuang"
+            url: "https://www.harpercollins.com/products/the-burning-god-r-f-kuang"
+        -   title: "The Dragon Republic"
+            authors: "R.F. Kuang"
+            url: "https://www.harpercollins.com/products/the-dragon-republic-r-f-kuang?variant=32121928122402"
         -   title: "Until the Last of Me"
             authors: "Sylvain Neuvel"
             url: "https://www.penguin.co.uk/books/316142/until-the-last-of-me-by-neuvel-sylvain/9780241445143"
