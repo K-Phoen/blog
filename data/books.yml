@@ -1,6 +1,12 @@
 -
     year: 2022
     books:
+        -   title: "We Are Satellites"
+            authors: "Sarah Pinsker"
+            url: "https://www.penguinrandomhouse.com/books/598513/we-are-satellites-by-sarah-pinsker/"
+        -   title: "Before the Coffee Gets Cold"
+            authors: "Toshikazu Kawaguchi"
+            url: "https://www.panmacmillan.com/authors/toshikazu-kawaguchi/before-the-coffee-gets-cold/9781529029581"
         -   title: "The Last Colony"
             authors: "John Scalzi"
             url: "https://us.macmillan.com/books/9780765356185/thelastcolony"
