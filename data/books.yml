@@ -1,6 +1,12 @@
 -
     year: 2022
     books:
+        -   title: "All These Worlds"
+            authors: "Dennis E. Taylor"
+            url: "https://www.amazon.com/All-These-Worlds-Bobiverse-3/dp/1680680609/"
+        -   title: "For We Are Many"
+            authors: "Dennis E. Taylor"
+            url: "https://www.amazon.com/We-Are-Many-Bobiverse/dp/1680680595"
         -   title: "We Are Satellites"
             authors: "Sarah Pinsker"
             url: "https://www.penguinrandomhouse.com/books/598513/we-are-satellites-by-sarah-pinsker/"
