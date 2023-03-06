@@ -20,3 +20,4 @@ jobs:
       - uses: K-Phoen/hugo-gh-pages-action@master
         with:
           github_token: ${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}
+          hugo_version: '0.111.2'
