@@ -17,19 +17,31 @@ a:hover, a:focus {
     text-decoration: underline;
 }
 
-.highlight pre, pre, .highlight .hll { background-color: #f8f8f8; border: 1px solid #ccc; padding: 6px 10px; border-radius: 3px; }
-code, code > span, kbd, pre, samp {
-    line-height: 1.1em;
-    font-size: 17px;
-    font-family: monospace,monospace!important;
-}
-
 code {
+    font-family: monospace,monospace!important;
+    line-height: 1.1rem;
+    font-size: 1rem;
     border: 1px solid #ccc;
 }
 
-pre > code {
+.highlight pre, pre, .highlight .hll {
+    padding: 6px 10px;
+    border-radius: 0.4rem;
+    line-height: 1.4rem;
+    font-size: 1.2rem;
+}
+
+.highlight pre > code {
+    line-height: 1.4rem;
+    font-size: 1.2rem;
+}
+
+.highlight pre > code {
     border: none;
+}
+
+.mermaid > svg {
+    max-width: 100%!important;
 }
 
 /* LAYOUT CSS */

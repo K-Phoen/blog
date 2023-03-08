@@ -2,10 +2,6 @@ title = "Kévin Gomez"
 baseurl = "/"
 languageCode = "en-us"
 
-pygmentsCodeFences = true
-pygmentsUseClassic = true # use pygments instead of chroma
-pygmentsOptions = "startinline=true"
-pygmentsStyle = "tango"
 enableGitInfo = true
 disableHugoGeneratorInject = true
 disableKinds = ["sitemap"]
@@ -24,3 +20,13 @@ disableKinds = ["sitemap"]
 
 [permalinks]
     posts = "/:year/:month/:day/:filename/"
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe= true
+
+  [markup.highlight]
+    lineNos = true
+    lineNumbersInTable = false
+    style = 'onedark'
+    tabWidth = 4
