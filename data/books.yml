@@ -1,4 +1,19 @@
 -
+    year: 2023
+    books:
+        -   title: "Revenge"
+            authors: "Yoko Ogawa"
+            url: "https://shop.penguin.co.uk/products/revenge-by-yoko-ogawa"
+        -   title: "Ice"
+            authors: "Anna Kavan"
+            url: "https://www.penguinrandomhouse.com/books/557977/ice-by-anna-kavan/"
+        -   title: "Babel"
+            authors: "R. F. Kuang"
+            url: "https://www.harpercollins.com/products/babel-r-f-kuang?variant=39874690940962"
+        -   title: "Remote Control"
+            authors: "Nnedi Okorafor"
+            url: "https://publishing.tor.com/remotecontrol-nnediokorafor/9781250772800/"
+-
     year: 2022
     books:
         -   title: "The End of All Things"
@@ -41,16 +56,16 @@
             authors: "John Scalzi"
             url: "https://us.macmillan.com/books/9780765354068/theghostbrigades"
         -   title: "The Burning God"
-            authors: "R.F. Kuang"
+            authors: "R. F. Kuang"
             url: "https://www.harpercollins.com/products/the-burning-god-r-f-kuang"
         -   title: "The Dragon Republic"
-            authors: "R.F. Kuang"
+            authors: "R. F. Kuang"
             url: "https://www.harpercollins.com/products/the-dragon-republic-r-f-kuang?variant=32121928122402"
         -   title: "Until the Last of Me"
             authors: "Sylvain Neuvel"
             url: "https://www.penguin.co.uk/books/316142/until-the-last-of-me-by-neuvel-sylvain/9780241445143"
         -   title: "The Poppy War"
-            authors: "R.F. Kuang"
+            authors: "R. F. Kuang"
             url: "https://www.harpercollins.com/products/the-poppy-war-r-f-kuang"
         -   title: "If Cats Disappeared from the World"
             authors: "Genki Kawamura"
