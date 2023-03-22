@@ -1,6 +1,15 @@
 -
     year: 2023
     books:
+        -   title: "People From My Neighbourhood"
+            authors: "Hiromi Kawakami"
+            url: "https://www.penguinrandomhouse.com/books/676239/people-from-my-neighborhood-by-hiromi-kawakami/"
+        -   title: "The Book of Phoenix"
+            authors: "Nnedi Okorafor"
+            url: "https://nnedi.com/books/the-book-of-phoenix/"
+        -   title: "Ready Player One"
+            authors: "Ernest Cline"
+            url: "https://www.penguinrandomhouse.com/books/209887/ready-player-one-by-ernest-cline/"
         -   title: "Revenge"
             authors: "Yoko Ogawa"
             url: "https://shop.penguin.co.uk/products/revenge-by-yoko-ogawa"
