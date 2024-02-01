@@ -1,5 +1,25 @@
+- year: 2024
+  books:
+      - title: "Scattered All Over the Earth"
+        authors: "Yoko Tawada"
+        url: "https://www.ndbooks.com/book/scattered-all-over-the-earth/"
+      - title: "A Maze of Death"
+        authors: "Philip K. Dick"
+        url: "https://www.sfbok.se/produkt/a-maze-of-death-3311"
+      - title: "Defekt"
+        authors: "Nino Cipri"
+        url: "https://publishing.tor.com/defekt-ninocipri/9781250787507/"
+      - title: "Finna"
+        authors: "Nino Cipri"
+        url: "https://publishing.tor.com/finna-ninocipri/9781250245724/"
 - year: 2023
   books:
+      - title: "Delta-v"
+        authors: "Daniel Suarez"
+        url: "https://www.penguinrandomhouse.com/series/NVD/a-delta-v-novel/"
+      - title: "The Terraformers"
+        authors: "Annalee Newitz"
+        url: "https://www.sfbok.se/produkt/the-terraformers-716164"
       - title: "The Space Between Worlds"
         authors: "Micaiah Johnson"
         url: "https://www.penguinrandomhouse.com/books/610612/the-space-between-worlds-by-micaiah-johnson/"
