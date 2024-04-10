@@ -1,5 +1,17 @@
 - year: 2024
   books:
+      - title: "We'll Always Have Paris"
+        authors: "Ray Bradbury"
+        url: "https://www.harpercollins.com/products/well-always-have-paris-ray-bradbury"
+      - title: "Slaughterhouse-Five"
+        authors: "Kurt Vonnegut"
+        url: "https://www.penguinrandomhouse.com/books/184345/slaughterhouse-five-by-kurt-vonnegut/"
+      - title: "Tales of Pirx the Pilot"
+        authors: "Stanisław Lem"
+        url: "https://english.lem.pl/works/novels/tales-of-pirx-the-pilot"
+      - title: "A Fisherman of the Inland Sea"
+        authors: "Ursula K. Le Guin"
+        url: "https://www.ursulakleguin.com/a-fisherman-of-the-inland-sea"
       - title: "Scattered All Over the Earth"
         authors: "Yoko Tawada"
         url: "https://www.ndbooks.com/book/scattered-all-over-the-earth/"
