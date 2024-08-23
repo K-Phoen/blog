@@ -1,5 +1,17 @@
 - year: 2024
   books:
+      - title: "Among the Living"
+        authors: "Tim Lebbon"
+        url: "https://titanbooks.com/71599-among-the-living/"
+      - title: "The Ministry for the Future"
+        authors: "Kim Stanley Robinson"
+        url: "https://www.orbitbooks.net/orbit-excerpts/the-ministry-for-the-future-chp-3/"
+      - title: "Breakfast of Champions"
+        authors: "Kurt Vonnegut"
+        url: "https://www.penguinrandomhouse.com/books/184327/breakfast-of-champions-by-kurt-vonnegut/"
+      - title: "Aurora Rising"
+        authors: "Alastair Reynolds"
+        url: "https://www.gollancz.co.uk/titles/alastair-reynolds/aurora-rising/9781473223363/"
       - title: "We'll Always Have Paris"
         authors: "Ray Bradbury"
         url: "https://www.harpercollins.com/products/well-always-have-paris-ray-bradbury"
