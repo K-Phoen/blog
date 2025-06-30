@@ -1,6 +1,6 @@
 HUGO_VERSION=0.147.9
 REGISTRY?=ghcr.io
-IMAGE_NAME?=blog
+IMAGE_NAME?=k-phoen/blog
 IMAGE_VERSION?=latest
 
 .PHONY: serve
