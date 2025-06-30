@@ -3,21 +3,32 @@ on:
   push:
     branches: [master]
 
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
 jobs:
-  hugo_deploy:
-    name: Hugo
+  build-and-push-image:
+    name: Publish Docker image
     runs-on: ubuntu-latest
 
-    if: "!contains(github.event.head_commit.message, 'Automatic deployment')"
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+      id-token: write
 
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 1
-          submodules: recursive
-          token: ${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}
+      - uses: actions/checkout@v4
 
-      - uses: K-Phoen/hugo-gh-pages-action@master
+      - name: Log in to the Container registry
+        uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
         with:
-          github_token: ${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}
-          hugo_version: '0.111.2'
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        run: |
+          IMAGE_VERSION=${GITHUB_SHA::6} make build
+          IMAGE_VERSION=${GITHUB_SHA::6} make push
