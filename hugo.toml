@@ -2,7 +2,7 @@ title = "Kévin Gomez"
 baseurl = "/"
 languageCode = "en-us"
 
-enableGitInfo = true
+enableGitInfo = false
 disableHugoGeneratorInject = true
 disableKinds = ["sitemap"]
 
@@ -15,11 +15,11 @@ disableKinds = ["sitemap"]
 
 [frontmatter]
     lastmod = ["lastmod"]
-    date = ["date", ":filename", "lastmod", ":git"]
+    date = ["date", ":contentbasename", "lastmod", ":git"]
     publishDate = ["publishDate", "date"]
 
 [permalinks]
-    posts = "/:year/:month/:day/:filename/"
+    posts = "/:year/:month/:day/:contentbasename/"
 
 [markup]
   [markup.goldmark.renderer]

@@ -1,10 +1,23 @@
-HUGO_VERSION=0.111.2
+HUGO_VERSION=0.147.9
+REGISTRY?=ghcr.io
+IMAGE_NAME?=blog
+IMAGE_VERSION?=latest
 
+.PHONY: serve
 serve: bin/hugo
-	./bin/hugo server --noBuildLock --buildDrafts --verbose
+	./bin/hugo server --noBuildLock --buildDrafts --buildFuture
 
-deploy:
-	./bin/deploy
+.PHONY: build
+build:
+	docker build --build-arg HUGO_VERSION=${HUGO_VERSION} -t ${REGISTRY}/${IMAGE_NAME}:${IMAGE_VERSION} .
+
+.PHONY: push
+push:
+	docker push ${REGISTRY}/${IMAGE_NAME}:${IMAGE_VERSION}
+
+.PHONY: preview
+preview:
+	docker run --rm -p 8080:80 ${REGISTRY}/${IMAGE_NAME}:${IMAGE_VERSION}
 
 bin/hugo:
 	wget https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_$(HUGO_VERSION)_linux-amd64.tar.gz

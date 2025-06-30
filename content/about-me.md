@@ -1,6 +1,6 @@
 ---
 title: About me
-layout: page
+layout: single
 ---
 
 <h1>About me</h1>
