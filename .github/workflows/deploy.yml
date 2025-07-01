@@ -42,4 +42,5 @@ jobs:
         env:
           TERM: 'xterm'
           LOG_LEVEL: '7' # debug
+          DRY_RUN: 'no'
 
