@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: nosborn/github-action-markdown-cli@v3.2.0
+      - uses: nosborn/github-action-markdown-cli@v3.5.0
         with:
           files: ./content/
           config_file: .markdownlint.json
@@ -20,13 +20,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: reviewdog/action-misspell@master
+      - uses: reviewdog/action-misspell@9daa94af4357dddb6fd3775de806bc0a8e98d3e4 # v1.26.3
         with:
           reporter: github-pr-review
           locale: "US"
 
       - name: alexjs
-        uses: reviewdog/action-alex@v1
+        uses: reviewdog/action-alex@6083b8ca333981fa617c6828c5d8fb21b13d916b # v1.16.0
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
