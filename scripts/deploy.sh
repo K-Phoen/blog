@@ -55,8 +55,7 @@ info "Cloning ${K8S_REPO} into ${k8s_repo_workspace}"
 git clone --depth 1 "${K8S_REPO}" "${k8s_repo_workspace}"
 
 debug "Updating ${BLOG_VALUES_FILE}"
-yq -y -i ".blog.tag = \"${IMAGE_TAG}\"" "${k8s_repo_workspace}/${BLOG_VALUES_FILE}"
-
+yq -i ".blog.tag = \"${IMAGE_TAG}\"" "${k8s_repo_workspace}/${BLOG_VALUES_FILE}"
 
 debug "Adding changes to git staging area"
 git_run "${k8s_repo_workspace}" add .
