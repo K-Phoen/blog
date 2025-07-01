@@ -4,5 +4,6 @@
   "no-hard-tabs": false,
   "no-trailing-punctuation": false,
   "no-bare-urls": false,
-  "line-length": false
+  "line-length": false,
+  "no-alt-text": false
 }

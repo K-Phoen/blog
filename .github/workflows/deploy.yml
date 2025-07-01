@@ -31,3 +31,15 @@ jobs:
         run: |
           IMAGE_VERSION=${GITHUB_SHA::6} make build
           IMAGE_VERSION=${GITHUB_SHA::6} make push
+
+      - name: Deploy to Kubernetes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global url."https://x-access-token:${{ secrets.DEPLOY_PAT }}@github.com/".insteadOf "git@github.com:"
+
+          ./scripts/deploy.sh "${GITHUB_SHA::6}"
+        env:
+          TERM: 'xterm'
+          LOG_LEVEL: '7' # debug
+
