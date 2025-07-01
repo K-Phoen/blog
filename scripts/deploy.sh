@@ -22,6 +22,18 @@ DRY_RUN=${DRY_RUN:-"yes"} # Some kind of fail-safe to ensure that we're only pus
 CLEANUP_WORKSPACE=${CLEANUP_WORKSPACE:-"yes"} # Should the workspace be deleted after the script runs?
 WORKSPACE_PATH=${WORKSPACE_PATH:-'./workspace'}
 
+function run_when_safe() {
+  local command=${1}
+  shift
+
+  if [ "${DRY_RUN}" == "no" ]; then
+    ${command} "$@"
+  else
+    warning "Dry run enabled: skipping execution of \"${command} $*\""
+    info "Run this script with DRY_RUN=no to disable dry-run mode."
+  fi
+}
+
 #################
 ### Usage ###
 #################
