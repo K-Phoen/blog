@@ -113,3 +113,8 @@ body, a, a:visited {
   visibility: hidden;
   display: block;
 }
+
+.link-logo {
+  height: 6rem;
+  filter: invert(21%) sepia(12%) saturate(257%) hue-rotate(314deg) brightness(96%) contrast(83%); /* #443F3F */
+}
