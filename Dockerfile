@@ -17,6 +17,8 @@ RUN hugo --minify --gc
 ###########
 FROM nginx:1.29.0-alpine
 
-COPY build/nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY build/nginx/blog.kevingomez.fr.conf /etc/nginx/conf.d/default.conf
+COPY build/nginx/www.kevingomez.fr.conf /etc/nginx/conf.d/www.kevingomez.fr.conf
 
-COPY --from=build /project/public /site
+COPY --from=build /project/public /opt/blog
+COPY --from=build /project/www /opt/www
