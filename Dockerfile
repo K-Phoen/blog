@@ -15,7 +15,7 @@ RUN hugo --minify --gc
 ###########
 # RUNTIME #
 ###########
-FROM nginx:1.29.0-alpine
+FROM nginxinc/nginx-unprivileged:1.29.0-alpine3.22
 
 COPY build/nginx/blog.kevingomez.fr.conf /etc/nginx/conf.d/default.conf
 COPY build/nginx/www.kevingomez.fr.conf /etc/nginx/conf.d/www.kevingomez.fr.conf

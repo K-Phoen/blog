@@ -17,7 +17,7 @@ push:
 
 .PHONY: preview
 preview:
-	docker run --rm -p 8080:80 ${REGISTRY}/${IMAGE_NAME}:${IMAGE_VERSION}
+	docker run --rm -p 8080:8080 ${REGISTRY}/${IMAGE_NAME}:${IMAGE_VERSION}
 
 bin/hugo:
 	wget https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_$(HUGO_VERSION)_linux-amd64.tar.gz
