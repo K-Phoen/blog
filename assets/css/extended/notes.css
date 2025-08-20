@@ -1,0 +1,69 @@
+/* Sidenote counter */
+body {
+  counter-reset: sidenote-counter;
+}
+
+.sidenote-number {
+  counter-increment: sidenote-counter;
+}
+
+/* Counter before the sidenote in the margin. */
+.sidenote::before {
+  content: counter(sidenote-counter)".";
+  position: relative;
+  vertical-align: baseline;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding-right: 0.3rem;
+}
+
+/* Counter in the main body. */
+.sidenote-number::after {
+  content: counter(sidenote-counter);
+  vertical-align: super;
+  font-size: 0.7em;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* side and margin notes */
+.sidenote,
+.marginnote {
+  font-size: 80%;
+  position: relative;
+}
+
+/* Wide viewport */
+@media (min-width: 1400px) {
+
+  .sidenote,
+  .marginnote {
+    float: right;
+    clear: right;
+    margin-right: -23vw;
+    text-align: left;
+
+    padding: .4em;
+    width: 20vw;
+  }
+
+  /* Highlight the sidenote when mouse hovers on the sidenote number in body. */
+  .sidenote-number:hover .sidenote {
+    background: var(--entry);
+    border-radius: var(--radius);
+  }
+}
+
+/* Narrow viewport */
+@media (max-width: 1400px) {
+
+  .sidenote,
+  .marginnote {
+    float: left;
+    text-align: left;
+
+    width: 100%;
+    margin: 1rem 0;
+    padding-left: 1rem;
+  }
+}

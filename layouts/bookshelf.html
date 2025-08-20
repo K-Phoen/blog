@@ -1,17 +1,21 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
+<article>
+    <div class="post-content">
+        <h1 post-title entry-hint-parent>{{ .Title }}</h1>
 
-<ul class="books">
-{{ range $.Site.Data.books }}
-    <h2>{{ .year }} — {{ .books | len }} books</h2>
+        <ul class="books">
+        {{ range $.Site.Data.books }}
+            <h2>{{ .year }} — {{ .books | len }} books</h2>
 
-    <ul>
-    {{ range .books }}
-        <li itemscope itemtype="http://schema.org/Book">
-            <a href="{{ .url }}" itemprop="name">{{ .title }}</a> - <em itemprop="author">{{ .authors }}</em>
-        </li>
-    {{ end }}
-    </ul>
-{{ end }}
-</ul>
+            <ul>
+            {{ range .books }}
+                <li itemscope itemtype="http://schema.org/Book">
+                    <a href="{{ .url }}" itemprop="name">{{ .title }}</a> - <em itemprop="author">{{ .authors }}</em>
+                </li>
+            {{ end }}
+            </ul>
+        {{ end }}
+        </ul>
+    </div>
+</article>
 {{ end }}
