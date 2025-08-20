@@ -23,10 +23,7 @@ disableKinds = ["sitemap"]
   ShowFullTextinRSS = true
   ShowRssButtonInSectionTermList = true
   disableScrollToTop = true
-
-  [params.homeInfoParams]
-  Title = "Hi there wave"
-  Content = "Can be Info, links, about..."
+  disableSpecial1stPost = true
 
   [params.assets]
   disableHLJS = true
@@ -44,6 +41,11 @@ disableKinds = ["sitemap"]
   url = "https://hachyderm.io/@kphoen"
 
 [menu]
+  [[menu.main]]
+  identifier = 'posts'
+  name = 'Posts'
+  url = '/posts/'
+  weight = 10
   [[menu.main]]
   identifier = 'bookshelf'
   name = 'Bookshelf'

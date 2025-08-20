@@ -1,0 +1,22 @@
+.home-info {
+    min-height: 10vw;
+    margin: 0;
+}
+
+.tags-block {
+    display: block;
+    width: 100%;
+}
+
+.post-tags {
+    margin-top: 1rem;
+}
+
+footer>.social-icons {
+    margin-bottom: 1rem;
+
+    a,
+    a:hover {
+        border: none;
+    }
+}
