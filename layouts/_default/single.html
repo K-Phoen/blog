@@ -28,6 +28,13 @@
     </div>
     {{- end }}
   </header>
+
+  {{ if isset .Params "tldr" }}
+  <section class="shortcuts">
+    <p>Jump to <a href="#tl-dr">TL;DR</a></p>
+  </section>
+  {{ end }}
+
   {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
   {{- if (.Param "ShowToc") }}
@@ -39,6 +46,13 @@
     {{- if not (.Param "disableAnchoredHeadings") }}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}
+
+    {{ with .Params.Tldr }}
+    <section>
+      <h2 id="tl-dr">TL;DR</h2>
+      {{ . | markdownify }}
+    </section>
+    {{ end }}
   </div>
   {{- end }}
 
