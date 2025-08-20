@@ -1,7 +1,7 @@
 ---
 title: RulerZ, specifications and Symfony are in a boat
-description: I already introduced [RulerZ and the reasoning behind it](/2015/02/07/on-taming-repository-classes-in-doctrine-among-other-things/). This time I'll showcase its integration with Symfony and the Form Component.
 date: 2015-03-14
+tags: [PHP, Symfony]
 tldr: >
     Using RulerZ and Symfony you can:
 

@@ -1,7 +1,7 @@
 ---
 title: Symfony best practices
-description: Digest of my best practices for Symfony projects. They are given as is, in no particular order and are far from being exhaustive.
 date: 2014-04-08
+tags: [PHP, Symfony]
 ---
 
 Here is a digest of the best practices that are commonly followed for Symfony2

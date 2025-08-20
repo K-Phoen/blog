@@ -2,9 +2,7 @@
 title: "Replacing ServiceLB by MetalLB in k3s"
 date: 2025-08-18
 draft: true
-description: "TODO"
 tags: [homelab]
-#tldr: ""
 ---
 
 I setup my homelab a while ago, basically on a whim to have some fun with Kubernetes on cheap hardware, and hopefully learn something along the way.

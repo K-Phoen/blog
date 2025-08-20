@@ -1,9 +1,8 @@
 ---
 title: Why is uniqid() slow?
-category: til
+tags: [til, PHP]
+date: 2015-07-26
 url: /til/2015/07/26/why-is-uniqid-slow/
-description: While profiling [RulerZ](https://github.com/K-Phoen/rulerz) with [Blackfire.io](https://blackfire.io/), I noticed that a non-negligible amount of time was consumed by PHP's `uniqid()` function. I found it odd that it consumed so much time and started to investigate why.
-
 tldr: >
     If called without `$more_entropy = true`, `uniqid()` calls sleep for **at
     least** 1 microsecond.

@@ -2,13 +2,6 @@
 title: "Three years of Grafana dashboards as code"
 date: 2023-03-07
 
-description: >
-    At [Voi](https://www.voi.com/), we've been relying on [`grabana`](https://github.com/K-Phoen/grabana) and [DARK](https://github.com/K-Phoen/dark)
-    to generate Grafana dashboards as code for the past three years.
-
-
-    What kind of dashboards did we build? In hindsight, what value did we actually get out of this approach?
-
 tldr: >
     * [consistency, structure and impact on cognitive load](https://grafana.com/docs/grafana/latest/dashboards/build-dashboards/best-practices/) in dashboards are key
 
