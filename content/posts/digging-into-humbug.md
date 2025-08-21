@@ -1,8 +1,7 @@
 ---
 title: 'Digging into: Humbug'
 date: 2016-10-23
-description: >
-    How does Humbug mutate source code?
+tags: [PHP]
 tldr: >
     In the end, the mutation generation by Humbug is *pretty straightforward*:
 

@@ -1,9 +1,7 @@
 ---
 title: Use cases for PHP generators
 date: 2016-01-20
-description: >
-    Despite being available since PHP 5.5.0, generators are still largely
-    underused. Let's see what how awesome they are through *real-world* cases.
+tags: [PHP]
 ---
 
 Despite being available since PHP 5.5.0, generators are still largely underused.

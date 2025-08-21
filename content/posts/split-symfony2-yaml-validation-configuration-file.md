@@ -1,7 +1,7 @@
 ---
 title: Split Symfony2 YAML validation configuration file
-description: Symfony snippet showing how to use several validation files.
 date: 2013-10-14
+tags: [PHP, Symfony]
 ---
 
 **Important** : as j0k pointed out in the comments, Symfony 2.5 changed the way validation files are loaded. Refer to [this StackOverflow answer](http://stackoverflow.com/questions/24064813/how-to-split-validation-yaml-files-in-symfony-2-5/24210501#24210501) if you are using Symfony >= 2.5.

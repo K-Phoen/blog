@@ -1,20 +1,24 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
+<article>
+    <div class="post-content">
+        <h1>{{ .Title }}</h1>
 
-<ul class="talks">
-{{ range $.Site.Data.talks }}
-    <h2>{{ .year }}</h2>
+        <ul class="talks">
+        {{ range $.Site.Data.talks }}
+            <h2>{{ .year }}</h2>
 
-    <ul>
-    {{ range .talks }}
-        <li>
-            <a href="{{ .slides_url }}">{{ .title }}</a> - <em>{{ .at }}</em>
-            {{ if isset . "video_url" }}
-            (<a href="{{ .video_url }}">video</a>)
+            <ul>
+            {{ range .talks }}
+                <li>
+                    <a href="{{ .slides_url }}">{{ .title }}</a> - <em>{{ .at }}</em>
+                    {{ if isset . "video_url" }}
+                    (<a href="{{ .video_url }}">video</a>)
+                    {{ end }}
+                </li>
             {{ end }}
-        </li>
-    {{ end }}
-    </ul>
-{{ end }}
-</ul>
+            </ul>
+        {{ end }}
+        </ul>
+    </div>
+</article>
 {{ end }}

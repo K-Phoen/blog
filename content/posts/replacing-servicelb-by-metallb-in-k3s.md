@@ -2,13 +2,12 @@
 title: "Replacing ServiceLB by MetalLB in k3s"
 date: 2025-08-18
 draft: true
-description: "TODO"
-#tldr: ""
+tags: [homelab]
 ---
 
 I setup my homelab a while ago, basically on a whim to have some fun with Kubernetes on cheap hardware, and hopefully learn something along the way.
 
-As a result, I chose to deploy [k3s](https://docs.k3s.io/) in – _almost_ – its most straightforward form{{% sidenote "traefik-ingress" %}}Traefik is disabled to use a more recent version than what k3s shipped at the time.{{% /sidenote %}}.
+As a result, I chose to deploy [k3s](https://docs.k3s.io/) in – _almost_ – its most straightforward form. {{% sidenote %}}Traefik is disabled to use a more recent version than what k3s shipped at the time.{{% /sidenote %}}
 
 A control-plane deployed with:
 
@@ -37,7 +36,7 @@ flowchart LR
 ```
 
 Fast forward a while and it turns out that some of the services are used on a daily basis, and not just by me.
-Nothing critical{{% sidenote "hosted-svc-example" %}}Think [Immich](https://immich.app/) and such.{{% /sidenote %}} but I figured it was time to have a proper look at this setup and improve it.
+Nothing critical{{% sidenote %}}Think [Immich](https://immich.app/) and such.{{% /sidenote %}} but I figured it was time to have a proper look at this setup and improve it.
 
 One thing that bothered me is that all the traffic meant for my `type: LoadBalancer` services was forwarded from my gateway to a single node in the cluster, and then forwarded once more to the correct pod.
 
@@ -47,11 +46,11 @@ This is mainly due to [how ServiceLB works](https://docs.k3s.io/networking/netwo
 
 ServiceLB is the default load balancer implementation shipped with k3s. I am grossly over-simplifying, but basically it watches Kubernetes `Services` with the `spec.type` field set to `LoadBalancer`. For each of those `Services`, a `Daemonset` is created that in turn creates a `svclb-*` pod on each node.
 
-{{% marginnote "servicelb-nodeport-similarity" %}}This behavior is reminiscent of [`type: NodePort` services](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport).{{% /marginnote %}}As a result, instead of giving a dedicated IP/<acronym title="Virtual IP">VIP</acronym> like other `LoadBalancer` implementations would, these pods expose the desired port directly on the node via `hostPort`.
+{{% marginnote %}}This behavior is reminiscent of [`type: NodePort` services](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport).{{% /marginnote %}}As a result, instead of giving a dedicated IP/<abbr title="Virtual IP">VIP</abbr> like other `LoadBalancer` implementations would, these pods expose the desired port directly on the node via `hostPort`.
 
 What all of this means is that if the node that my gateway forwards all the traffic to goes down, then all my services appear to be down.
 
-Instead, I would like a load balancer implementation that exposes a <acronym title="Virtual IP">VIP</acronym> that my gateway can use, and handle the fail-over automatically when the node targeted by that VIP goes down.
+Instead, I would like a load balancer implementation that exposes a <abbr title="Virtual IP">VIP</abbr> that my gateway can use, and handle the fail-over automatically when the node targeted by that VIP goes down.
 I am mainly looking for high-availability, actual load balancing is not a requirement for me since the traffic I deal with is fairly small.
 
 ## MetalLB

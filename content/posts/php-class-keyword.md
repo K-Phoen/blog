@@ -1,10 +1,8 @@
 ---
 title: PHP ::class keyword
-category: til
+date: 2016-01-15
+tags: [til, PHP]
 url: /til/2016/01/15/php-class-keyword/
-description: >
-    The `::class` keyword look like it can be used to assert that the generated FQCN will point to a valid class. Guess what: it cant.
-
 tldr: >
     The `::class` keyword also works on classes that does not exist. It will
     only generate a FQCN, without actually autoloading the class and checking
