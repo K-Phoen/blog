@@ -86,7 +86,9 @@ As always, make sure you go through [the official installation guide](https://me
 
 {{% marginnote %}}If like me you are using [Argo CD](https://argo-cd.readthedocs.io/en/stable/) (or [Flux](https://fluxcd.io/) or other), don't forget to temporarily disable its automatic sync.{{% /marginnote %}}Start by deleting existing `type: LoadBalancer` services, to ensure that no outdated routing configuration is left behind by ServiceLB.
 
-MetalLB can be install via a Helm chart:
+ServiceLB can then be disabled by adding `--disable=servicelb` on the control-plane node and restarting k3s: `systemctl restart k3s.service`
+
+MetalLB can now be installed via a Helm chart:
 
 ```sh
 helm repo add metallb https://metallb.github.io/metallb
@@ -175,4 +177,4 @@ Which allowed me to create a simple overview dashboard:
 
 [<img src="metallb-overview-dashboard.png" width="100%" />](./metallb-overview-dashboard.png)
 
-Bonus: this dashboard was [generated as code](https://github.com/K-Phoen/homelab/blob/b29f8d10987f6c6d83d0d18f80dcfbdbab308260/grafana/dashboards/metallb/overview.go) using the [Grafana Foundation SDK](https://github.com/grafana/grafana-foundation-sdk/). 
+Bonus: this dashboard was [generated as code](https://github.com/K-Phoen/homelab/blob/b29f8d10987f6c6d83d0d18f80dcfbdbab308260/grafana/dashboards/metallb/overview.go) using the [Grafana Foundation SDK](https://github.com/grafana/grafana-foundation-sdk/).
