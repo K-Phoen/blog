@@ -1,5 +1,5 @@
 title = "Kévin Gomez"
-baseurl = "/"
+baseurl = "https://blog.kevingomez.fr"
 languageCode = "en-us"
 
 theme = "PaperMod"
