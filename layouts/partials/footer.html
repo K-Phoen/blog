@@ -34,16 +34,6 @@
 
 {{- partial "extend_footer.html" . }}
 
-{{ if .Page.Store.Get "hasMermaid" }}
-<script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.9.0/+esm';
-    mermaid.initialize({
-        startOnLoad: true,
-        theme: 'neutral',
-    });
-</script>
-{{ end }}
-
 <script>
     let menu = document.getElementById('menu')
     if (menu) {
