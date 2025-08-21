@@ -54,7 +54,7 @@ disableKinds = ["sitemap"]
   [[menu.main]]
   identifier = "about-me"
   name = "About me"
-  url = "/about-me"
+  url = "/about-me/"
   weight = 30
 
 [social]
