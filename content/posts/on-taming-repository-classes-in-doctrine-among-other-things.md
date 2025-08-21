@@ -1,6 +1,7 @@
 ---
 title: On Taming Repository Classes in Doctrine… Among other things.
 date: 2015-02-07
+tags: [PHP]
 ---
 
 A while ago I stumbled upon a - rather old but nonetheless interesting - [post](http://www.whitewashing.de/2013/03/04/doctrine_repositories.html) written by [@beberlei](https://twitter.com/beberlei). In his post, he highlighted the issues of having **too much responsibilities in a repository** and suggested a solution based on the **[Specification pattern](http://en.wikipedia.org/wiki/Specification_pattern)**.

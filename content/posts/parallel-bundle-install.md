@@ -1,6 +1,7 @@
 ---
 title: Parallel bundle install
-category: til
+date: 2015-07-12
+tags: [til]
 url: /til/2015/07/12/parallel-bundle-install/
 ---
 

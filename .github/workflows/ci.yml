@@ -25,17 +25,12 @@ jobs:
           reporter: github-pr-review
           locale: "US"
 
-      - name: alexjs
-        uses: reviewdog/action-alex@6083b8ca333981fa617c6828c5d8fb21b13d916b # v1.16.0
-        with:
-          github_token: ${{ secrets.github_token }}
-          reporter: github-pr-review
-          level: warning
-
   build:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: recursive
 
       - run: make build

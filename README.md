@@ -10,7 +10,7 @@ You should have a server up and running locally at <http://localhost:1313>.
 
 ## Creating a new post
 
-`hugo new posts/this-blog-has-continuous-integration.md`
+`./bin/hugo new posts/this-blog-has-continuous-integration.md`
 
 ## Deployment
 

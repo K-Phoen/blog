@@ -1,10 +1,6 @@
 ---
 title: Looking for a new job!
 date: 2018-05-14
-description: >
-    After three years as a software engineer at [TEA — The Ebook Alternative](https://www.tea-ebook.com/),
-    **I quit my job**, I left my flat and I took my backpack and my shoes to
-    travel across Europe… in part to look for a job.
 
 tldr: >
     * **I am looking for a job, somewhere in Europe**

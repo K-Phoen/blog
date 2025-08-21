@@ -1,25 +1,73 @@
 title = "Kévin Gomez"
-baseurl = "/"
+baseurl = "https://blog.kevingomez.fr"
 languageCode = "en-us"
+
+theme = "PaperMod"
 
 enableGitInfo = false
 disableHugoGeneratorInject = true
 disableKinds = ["sitemap"]
 
+[minify]
+  minifyOutput = false # TODO: enable
+
 [params]
-    author = "Kévin Gomez"
-    mainSections = ["posts", "til"]
+  env = "production" # to enable google analytics, opengraph, twitter-cards and schema.
+
+  author = "Kévin Gomez"
+  mainSections = ["posts", "til"]
+
+  ShowReadingTime = true
+  ShowToc = true
+  ShowCodeCopyButtons = true
+  ShowFullTextinRSS = true
+  ShowRssButtonInSectionTermList = true
+  disableScrollToTop = true
+  disableSpecial1stPost = true
+
+  [params.assets]
+  disableHLJS = true
+
+  [[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/K-Phoen"
+
+  [[params.socialIcons]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/kevingomez/"
+
+  [[params.socialIcons]]
+  name = "mastodon"
+  url = "https://hachyderm.io/@kphoen"
+
+[menu]
+  [[menu.main]]
+  identifier = 'bookshelf'
+  name = 'Bookshelf'
+  url = '/bookshelf/'
+  weight = 10
+  [[menu.main]]
+  identifier = "talks"
+  name = "Talks"
+  url = "/talks/"
+  weight = 20
+  [[menu.main]]
+  identifier = "about-me"
+  name = "About me"
+  url = "/about-me"
+  weight = 30
 
 [social]
-    twitter = "KPhoen"
+  twitter = "KPhoen"
 
 [frontmatter]
-    lastmod = ["lastmod"]
-    date = ["date", ":contentbasename", "lastmod", ":git"]
-    publishDate = ["publishDate", "date"]
+  lastmod = ["lastmod"]
+  date = ["date", "lastmod", ":git"]
+  publishDate = ["publishDate", "date"]
 
 [permalinks]
-    posts = "/:year/:month/:day/:contentbasename/"
+  [permalinks.page]
+    posts = "/:year/:month/:day/:slug/"
 
 [markup]
   [markup.goldmark.renderer]
@@ -28,5 +76,14 @@ disableKinds = ["sitemap"]
   [markup.highlight]
     lineNos = true
     lineNumbersInTable = false
+    codeFences = true
+    guessSyntax = true
     style = 'onedark'
-    tabWidth = 4
+    tabWidth = 2
+    noClasses = false
+
+[outputs]
+  home = ['html', 'rss']
+  section = ['html', 'rss']
+  taxonomy = ['html']
+  term = ['html']

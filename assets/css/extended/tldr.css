@@ -1,0 +1,19 @@
+.shortcuts {
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+  background: var(--code-bg);
+  border-radius: var(--radius);
+  padding: .4em;
+
+  a {
+    text-decoration: underline;
+  }
+
+  p {
+    margin-inline-start: 10px;
+  }
+}
+
+.dark .shortcuts {
+  background: var(--entry);
+}

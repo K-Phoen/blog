@@ -1,6 +1,7 @@
 ---
 title: About me
 layout: single
+showtoc: false
 ---
 
 <h1>About me</h1>
