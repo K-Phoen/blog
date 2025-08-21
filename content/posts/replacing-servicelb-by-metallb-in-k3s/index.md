@@ -1,8 +1,7 @@
 ---
 title: "Replacing ServiceLB by MetalLB in k3s"
-date: 2025-08-18
-draft: true
-tags: [homelab]
+date: 2025-08-21
+tags: [homelab, kubernetes]
 ---
 
 I setup my homelab a while ago, basically on a whim to have some fun with Kubernetes on cheap hardware, and hopefully learn something along the way.
@@ -53,11 +52,19 @@ What all of this means is that if the node that my gateway forwards all the traf
 Instead, I would like a load balancer implementation that exposes a <abbr title="Virtual IP">VIP</abbr> that my gateway can use, and handle the fail-over automatically when the node targeted by that VIP goes down.
 I am mainly looking for high-availability, actual load balancing is not a requirement for me since the traffic I deal with is fairly small.
 
-## MetalLB
+## An alternative: MetalLB
 
-disable Argo CD sync
+[MetalLB](https://metallb.io/) is a load-balancer implementation for bare metal Kubernetes clusters, using standard routing protocols.
 
-delete existing `type: LoadBalancer` services
+When used in [layer 2 mode](https://metallb.io/concepts/layer2/), MetalLB elects a node to assume the responsibility of advertising{{% sidenote %}}Under the hood, MetalLB responds to [ARP](https://en.wikipedia.org/wiki/Address_Resolution_Protocol) requests for IPv4 services, and [NDP](https://en.wikipedia.org/wiki/Neighbor_Discovery_Protocol) requests for IPv6.{{% /sidenote %}} a service to the local network. From the network's perspective, it looks like that machine has multiple IP addresses assigned to its network interface.
+
+The major advantage of the layer 2 mode is its universality: it will work on any Ethernet network, with no special hardware required.
+
+However, MetalLB does not implement an actual load balancer. Rather, it implements a failover mechanism so that a different node can take over should the current leader node fail for some reason.
+
+When a failure occurs, failover is automatic: the failed node is detected using [memberlist](https://github.com/hashicorp/memberlist){{% sidenote %}}See also: [Clusters and membership: discovering the SWIM protocol](/2019/01/29/clusters-and-membership-discovering-the-swim-protocol/){{% /sidenote %}}, at which point a new node take over ownership of the IP addresses from the failed node.
+
+The leader node could bottleneck your service's ingress, and failover could be relatively slow.
 
 ```mermaid
 flowchart LR
@@ -73,10 +80,20 @@ flowchart LR
     end
 ```
 
+## Installing MetalLB
+
+As always, make sure you go through [the official installation guide](https://metallb.io/installation/) first.
+
+{{% marginnote %}}If like me you are using [Argo CD](https://argo-cd.readthedocs.io/en/stable/) (or [Flux](https://fluxcd.io/) or other), don't forget to temporarily disable its automatic sync.{{% /marginnote %}}Start by deleting existing `type: LoadBalancer` services, to ensure that no outdated routing configuration is left behind by ServiceLB.
+
+MetalLB can be install via a Helm chart:
+
 ```sh
 helm repo add metallb https://metallb.github.io/metallb
 helm install metallb metallb/metallb
 ```
+
+And here is how to use it with Argo CD:
 
 ```yaml
 apiVersion: argoproj.io/v1alpha1
@@ -115,6 +132,8 @@ spec:
       ref: values
 ```
 
+I then created an [`IPAddressPool`](https://metallb.io/configuration/) to let MetalLB know the IP range{{% sidenote %}}Make sure your DHCP server won't allocate these IPs.{{% /sidenote %}} that it could allocate to services:
+
 ```yaml
 apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
@@ -126,6 +145,8 @@ spec:
     - 10.10.10.191-10.10.10.210
 ```
 
+MetalLB now needs to be configured to advertise the addresses from this pool, which I chose to do over ARP/in layer 2 mode:{{% sidenote %}}MetalLB also supports [advertising IPs using BGP](https://metallb.io/concepts/bgp/).{{% /sidenote %}}
+
 ```yaml
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
@@ -136,4 +157,22 @@ spec:
     - pool
 ```
 
-Bonus: Grafana dashboard as code: https://github.com/K-Phoen/homelab/blob/ff42696ebf6436bb646ce7d3c766866722f54c8f/grafana/dashboards/metallb/overview.go
+**Note:** remember to open port `7946` since MetalLB uses it for its memberlist.
+
+## Monitoring MetalLB
+
+MetalLB's helm chart provides a few ways of configuring how Prometheus should scrape its metrics.
+
+I went with `PodMonitors`, and enabled them in my `values.yaml` file:
+
+```yaml
+prometheus:
+  podMonitor:
+    enabled: true
+```
+
+Which allowed me to create a simple overview dashboard:
+
+[<img src="metallb-overview-dashboard.png" width="100%" />](./metallb-overview-dashboard.png)
+
+Bonus: this dashboard was [generated as code](https://github.com/K-Phoen/homelab/blob/b29f8d10987f6c6d83d0d18f80dcfbdbab308260/grafana/dashboards/metallb/overview.go) using the [Grafana Foundation SDK](https://github.com/grafana/grafana-foundation-sdk/). 

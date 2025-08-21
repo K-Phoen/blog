@@ -62,11 +62,12 @@ disableKinds = ["sitemap"]
 
 [frontmatter]
   lastmod = ["lastmod"]
-  date = ["date", ":contentbasename", "lastmod", ":git"]
+  date = ["date", "lastmod", ":git"]
   publishDate = ["publishDate", "date"]
 
 [permalinks]
-  posts = "/:year/:month/:day/:contentbasename/"
+  [permalinks.page]
+    posts = "/:year/:month/:day/:slug/"
 
 [markup]
   [markup.goldmark.renderer]
