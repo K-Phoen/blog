@@ -8,11 +8,8 @@ enableGitInfo = false
 disableHugoGeneratorInject = true
 disableKinds = ["sitemap"]
 
-[minify]
-  minifyOutput = false # TODO: enable
-
 [params]
-  env = "production" # to enable google analytics, opengraph, twitter-cards and schema.
+  env = "production" # to enable opengraph, twitter-cards and schema.
 
   author = "Kévin Gomez"
   mainSections = ["posts", "til"]
