@@ -4,7 +4,7 @@ date: 2025-08-21
 tags: [homelab, kubernetes]
 ---
 
-I setup my homelab a while ago, basically on a whim to have some fun with Kubernetes on cheap hardware, and hopefully learn something along the way.
+I setup my homelab a while ago, basically on a whim to have some fun with Kubernetes on cheap hardware and learn something along the way.
 
 As a result, I chose to deploy [k3s](https://docs.k3s.io/) in – _almost_ – its most straightforward form. {{% sidenote %}}Traefik is disabled to use a more recent version than what k3s shipped at the time.{{% /sidenote %}}
 
@@ -50,7 +50,8 @@ ServiceLB is the default load balancer implementation shipped with k3s. I am gro
 What all of this means is that if the node that my gateway forwards all the traffic to goes down, then all my services appear to be down.
 
 Instead, I would like a load balancer implementation that exposes a <abbr title="Virtual IP">VIP</abbr> that my gateway can use, and handle the fail-over automatically when the node targeted by that VIP goes down.
-I am mainly looking for high-availability, actual load balancing is not a requirement for me since the traffic I deal with is fairly small.
+
+Fail-over is what I am after. Actual load balancing is not a requirement for me since the traffic I deal with is fairly small.
 
 ## An alternative: MetalLB
 
@@ -66,20 +67,6 @@ When a failure occurs, failover is automatic: the failed node is detected using 
 
 The leader node could bottleneck your service's ingress, and failover could be relatively slow.
 
-```mermaid
-flowchart LR
-    gateway{"Gateway<br /><i>78.73.28.154</i>"}
-    gateway --> vip
-    subgraph k3s [k3s cluster]
-        direction LR
-        vip@{shape: braces, label: "VIP<br /><br /><i>10.10.10.191</i>"}
-        main("control-plane<br />+<br />worker<br /><i>10.10.10.64</i>")
-        vip -.-> main
-        main -.-> bean(worker<br /><i>10.10.10.91</i>)
-        main -.-> potato(worker<br /><i>10.10.10.122</i>)
-    end
-```
-
 ## Installing MetalLB
 
 As always, make sure you go through [the official installation guide](https://metallb.io/installation/) first.
@@ -88,7 +75,7 @@ As always, make sure you go through [the official installation guide](https://me
 
 ServiceLB can then be disabled by adding `--disable=servicelb` on the control-plane node and restarting k3s: `systemctl restart k3s.service`
 
-MetalLB can now be installed via a Helm chart:
+MetalLB can now be installed via a [Helm chart](https://github.com/metallb/metallb/tree/main/charts/metallb):
 
 ```sh
 helm repo add metallb https://metallb.github.io/metallb
@@ -161,9 +148,25 @@ spec:
 
 **Note:** remember to open port `7946` since MetalLB uses it for its memberlist.
 
+And that's it, a <abbr title="Virtual IP">VIP</abbr> per service is now created!
+
+```mermaid
+flowchart LR
+    gateway{"Gateway<br /><i>78.73.28.154</i>"}
+    gateway --> vip
+    subgraph k3s [k3s cluster]
+        direction LR
+        vip@{shape: braces, label: "VIP<br /><br /><i>10.10.10.191</i>"}
+        main("control-plane<br />+<br />worker<br /><i>10.10.10.64</i>")
+        vip -.-> main
+        main -.-> bean(worker<br /><i>10.10.10.91</i>)
+        main -.-> potato(worker<br /><i>10.10.10.122</i>)
+    end
+```
+
 ## Monitoring MetalLB
 
-MetalLB's helm chart provides a few ways of configuring how Prometheus should scrape its metrics.
+[MetalLB's helm chart](https://github.com/metallb/metallb/tree/main/charts/metallb) provides a few ways of configuring how Prometheus should scrape its metrics.
 
 I went with `PodMonitors`, and enabled them in my `values.yaml` file:
 
@@ -177,4 +180,4 @@ Which allowed me to create a simple overview dashboard:
 
 [<img src="metallb-overview-dashboard.png" width="100%" />](./metallb-overview-dashboard.png)
 
-Bonus: this dashboard was [generated as code](https://github.com/K-Phoen/homelab/blob/b29f8d10987f6c6d83d0d18f80dcfbdbab308260/grafana/dashboards/metallb/overview.go) using the [Grafana Foundation SDK](https://github.com/grafana/grafana-foundation-sdk/).
+Bonus: this dashboard was [generated from code](https://github.com/K-Phoen/homelab/blob/b29f8d10987f6c6d83d0d18f80dcfbdbab308260/grafana/dashboards/metallb/overview.go) using the [Grafana Foundation SDK](https://github.com/grafana/grafana-foundation-sdk/).
