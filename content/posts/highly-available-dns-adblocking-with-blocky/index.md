@@ -1,6 +1,6 @@
 ---
 title: "Highly available DNS ad blocking with blocky"
-date: 2025-08-29
+date: 2025-08-28
 tags: [homelab]
 ---
 
