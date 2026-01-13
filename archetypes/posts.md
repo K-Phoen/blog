@@ -1,12 +1,9 @@
 ---
-title: "{{ replace .Name "-" " " | humanize }}"
+title: {{ replace .Name "-" " " | humanize }}
 date: {{ dateFormat "2006-01-02" .Date }}
 draft: true
 tldr: ""
+tags: []
 ---
 
-excerpt/description
-
-<!--more-->
-
-rest
+Content.
