@@ -1,0 +1,7 @@
+ARG JUNI_VERSION=latest
+
+FROM kphoen/juni:${JUNI_VERSION}
+
+ENV JUNI_PUBLIC_DIRECTORY=/opt/blog
+
+COPY --chown=65532:65532 ./converted/ /opt/blog
