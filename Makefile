@@ -37,5 +37,5 @@ bin/hugo:
 
 .PHONY: gemini-convert
 gemini-convert: bin/hugo
-	docker run --rm --user $(shell id -u) -v $(shell pwd)/:/blog kphoen/juni-md2gemtext:${JUNI_VERSION} --flavor=hugo --output-dir=/blog/converted /blog/content/posts
+	docker run --rm --user $(shell id -u) -v $(shell pwd)/:/blog kphoen/juni-md2gemtext:${JUNI_VERSION} --flavor=hugo --output-dir=/blog/converted/posts /blog/content/posts
 	bin/hugo && mv public/index.md converted/index.gmi
