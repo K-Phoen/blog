@@ -29,10 +29,11 @@ preview-gemini:
 
 bin/hugo:
 	wget https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_$(HUGO_VERSION)_linux-amd64.tar.gz
-	tar -xzvf hugo_$(HUGO_VERSION)_linux-amd64.tar.gz hugo
-	mv hugo bin/hugo
-	chmod u+x bin/hugo
-	rm hugo_$(HUGO_VERSION)_linux-amd64.tar.gz
+	tar -xzf hugo_$(HUGO_VERSION)_linux-amd64.tar.gz hugo
+	@mkdir bin || true
+	@mv hugo bin/hugo
+	@chmod u+x bin/hugo
+	@rm hugo_$(HUGO_VERSION)_linux-amd64.tar.gz
 
 .PHONY: gemini-convert
 gemini-convert: bin/hugo
