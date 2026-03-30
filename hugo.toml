@@ -80,7 +80,7 @@ disableKinds = ["sitemap"]
     noClasses = false
 
 [outputs]
-  home = ['html', 'rss', 'markdown']
+  home = ['html', 'rss']
   section = ['html', 'rss']
   taxonomy = ['html']
   term = ['html']

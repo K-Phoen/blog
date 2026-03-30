@@ -36,6 +36,5 @@ bin/hugo:
 	@rm hugo_$(HUGO_VERSION)_linux-amd64.tar.gz
 
 .PHONY: gemini-convert
-gemini-convert: bin/hugo
-	docker run --rm --user $(shell id -u) -v $(shell pwd)/:/blog kphoen/juni-md2gemtext:${JUNI_VERSION} --flavor=hugo --output-dir=/blog/converted/posts /blog/content/posts
-	bin/hugo && mv public/index.md converted/index.gmi
+gemini-convert:
+	docker run --rm --user $(shell id -u) -v $(shell pwd)/:/blog kphoen/juni-md2gemtext:${JUNI_VERSION} --flavor=hugo --index-output-file=/blog/converted/index.gmi --index-tmpl-file=/blog/build/index.gmi.tmpl --output-dir=/blog/converted/posts /blog/content/posts
